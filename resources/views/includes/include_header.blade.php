@@ -29,6 +29,7 @@
                 <li><a href="#doctor">Team</a></li>
                 <li><a href="#facilities">Resources</a></li>
                 <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#partner">Partiners</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
                             class="badge custom-badge red pull-right">Extra</span>More <b class="caret"></b></a>

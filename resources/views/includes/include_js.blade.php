@@ -10,3 +10,5 @@
 <script src="{{ url('assets/js/owl.carousel.min.js') }}"></script>
 <script src="{{ url('assets/js/nivo-lightbox.min.js') }}"></script>
 <script src="{{ url('assets/js/custom.js') }}"></script>
+{{-- zoom image --}}
+<script src="{{ url('assets/css/lightbox/js/lightbox-plus-jquery.min.js') }}"></script>

@@ -12,3 +12,5 @@
 <link href="{{ url('assets/css/bodybg/bg1.css') }}" id="bodybg" rel="stylesheet" type="text/css" />
 <!-- template skin -->
 <link href="{{ url('assets/css/color/default.css') }}" id="t-colors" rel="stylesheet">
+{{-- zoom image --}}
+<link href="{{ url('assets/css/lightbox/css/lightbox.min.css') }}" rel="stylesheet">

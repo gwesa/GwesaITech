@@ -6,7 +6,8 @@
                     <div class="widget">
                         <h5>About GwesaITech</h5>
                         <p>
-                            GwesaITech is the us
+                            GwesaITech is the Tech Platform that aim to transform Technologies into community and 
+                            Support others to be aware of Tech Solutions
                         </p>
                     </div>
                 </div>
@@ -33,7 +34,7 @@
                             <li>
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-calendar-o fa-stack-1x fa-inverse"></i>
+                                    <i class="fa fa-calendar fa-stack-1x fa-inverse"></i>
                                 </span> Monday - Saturday, 8am to 10pm
                             </li>
                             <li>
@@ -57,7 +58,6 @@
                     <div class="widget">
                         <h5>Our location</h5>
                         <p>Dar es Salaam, Tanzania</p>
-
                     </div>
                 </div>
                 <div class="wow fadeInDown" data-wow-delay="0.1s">
@@ -70,7 +70,7 @@
                             </li>
                             <li class="social-google"><a href="#"><i class="fa fa-instagram"></i></a>
                             </li>
-                            {{-- <li class="social-vimeo"><a href="#"><i class="fa fa-linkedIn"></i></a> --}}
+                            <li class="social-vimeo"><a href="#"><i class="fa fa-phone"></i></a>
                             </li>
                             <li class="social-dribble"><a href="#"><i class="fa fa-youtube"></i></a>
                             </li>
