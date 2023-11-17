@@ -4,16 +4,7 @@
             <div class="col-sm-6 col-md-4">
                 <div class="wow fadeInDown" data-wow-delay="0.1s">
                     <div class="widget">
-                        <h5>About GwesaITech</h5>
-                        <p>
-                            GwesaITech is the Tech Platform that aim to transform Technologies into community and 
-                            Support others to be aware of Tech Solutions
-                        </p>
-                    </div>
-                </div>
-                <div class="wow fadeInDown" data-wow-delay="0.1s">
-                    <div class="widget">
-                        <h5>Information</h5>
+                        <h5>Useful Links</h5>
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">About GwesaITech</a></li>

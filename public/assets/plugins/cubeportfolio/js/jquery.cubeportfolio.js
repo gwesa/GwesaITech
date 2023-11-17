@@ -9,7 +9,7 @@
  *
  */
 
-(function($, window, document, undefined) {
+(function ($, window, document, undefined) {
 
     'use strict';
 
@@ -18,7 +18,7 @@
 
     // Utility
     if (typeof Object.create !== 'function') {
-        Object.create = function(obj) {
+        Object.create = function (obj) {
             function F() {}
             F.prototype = obj;
             return new F();
@@ -26,7 +26,7 @@
     }
 
     // jquery new filter for images uncached
-    $.expr[':'].uncached = function(obj) {
+    $.expr[':'].uncached = function (obj) {
         // Ensure we are dealing with an `img` element with a valid `src` attribute.
         if (!$(obj).is('img[src!=""]')) {
             return false;
@@ -46,7 +46,7 @@
          * @param cubeportfolio = cubeportfolio instance
          * @param type =  'lightbox' or 'singlePage'
          */
-        init: function(cubeportfolio, type) {
+        init: function (cubeportfolio, type) {
 
             var t = this,
                 currentBlock;
@@ -83,7 +83,7 @@
                     t.url = t.url.slice(0, -1);
                 }
 
-                currentBlock = t.cubeportfolio.blocksAvailable.find(t.options.singlePageDelegate).filter(function(index) {
+                currentBlock = t.cubeportfolio.blocksAvailable.find(t.options.singlePageDelegate).filter(function (index) {
                     // we split the url in half and store the second entry. If this entry is equal with current element return true
                     return (t.url.split('#cbp=')[1] === this.getAttribute('href'));
                 })[0];
@@ -103,7 +103,7 @@
         /**
          * Create markup, css and add events
          */
-        _createMarkup: function() {
+        _createMarkup: function () {
 
             var t = this;
 
@@ -111,7 +111,7 @@
             t.wrap = $('<div/>', {
                 'class': 'cbp-popup-wrap cbp-popup-' + t.type,
                 'data-action': (t.type === 'lightbox') ? 'close' : ''
-            }).on('click' + eventNamespace, function(e) {
+            }).on('click' + eventNamespace, function (e) {
                 if (t.stopEvents) {
                     return;
                 }
@@ -187,7 +187,7 @@
                     }).appendTo(t.navigation);
                 }
 
-                t.content.on('click' + eventNamespace, t.options.singlePageDelegate, function(e) {
+                t.content.on('click' + eventNamespace, t.options.singlePageDelegate, function (e) {
                     e.preventDefault();
                     var i,
                         len = t.dataArray.length,
@@ -205,7 +205,7 @@
 
             }
 
-            $(document).on('keydown' + eventNamespace, function(e) {
+            $(document).on('keydown' + eventNamespace, function (e) {
 
                 // if is not open => return
                 if (!t.isOpen) return;
@@ -224,13 +224,13 @@
 
         },
 
-        _createMarkupSinglePageInline: function() {
+        _createMarkupSinglePageInline: function () {
             var t = this;
 
             // wrap element
             t.wrap = $('<div/>', {
                 'class': 'cbp-popup-singlePageInline'
-            }).on('click' + eventNamespace, function(e) {
+            }).on('click' + eventNamespace, function (e) {
                 if (t.stopEvents) {
                     return;
                 }
@@ -268,7 +268,7 @@
 
         },
 
-        destroy: function() {
+        destroy: function () {
 
             var t = this;
 
@@ -289,7 +289,7 @@
             t.wrap.remove();
         },
 
-        openLightbox: function(blocks, currentBlock) {
+        openLightbox: function (blocks, currentBlock) {
 
             var t = this,
                 i = 0,
@@ -320,7 +320,7 @@
                 throw new Error('HEI! Your clicked element doesn\'t have a href attribute.');
             }
 
-            $.each(blocks.find(t.options.lightboxDelegate), function(index, item) {
+            $.each(blocks.find(t.options.lightboxDelegate), function (index, item) {
                 var href = item.getAttribute('href'),
                     src = href, // default if element is image
                     type = 'isImage'; // default if element is image
@@ -356,7 +356,7 @@
 
                     } else if (/(\.mp4)|(\.ogg)|(\.ogv)|(\.webm)/i.test(href)) {
 
-                        if ( href.indexOf('|') !== -1 ) {
+                        if (href.indexOf('|') !== -1) {
                             // create new href
                             src = href.split('|');
                         } else {
@@ -415,7 +415,7 @@
 
         },
 
-        openSinglePage: function(blocks, currentBlock) {
+        openSinglePage: function (blocks, currentBlock) {
 
             var t = this,
                 i = 0,
@@ -446,7 +446,7 @@
             }
 
 
-            $.each(blocks.find(t.options.singlePageDelegate), function(index, item) {
+            $.each(blocks.find(t.options.singlePageDelegate), function (index, item) {
                 var href = item.getAttribute('href');
 
                 if ($.inArray(href, tempHref) === -1) {
@@ -490,7 +490,7 @@
             // show the wrapper
             t.wrap.show();
 
-            t.wrap.one(t.cubeportfolio.transitionEnd, function() {
+            t.wrap.one(t.cubeportfolio.transitionEnd, function () {
                 var width;
 
 
@@ -509,7 +509,7 @@
 
             if (t.cubeportfolio.browser === 'ie8' || t.cubeportfolio.browser === 'ie9') {
 
-                setTimeout(function() {
+                setTimeout(function () {
                     t.wrap.addClass('cbp-popup-singlePage-sticky');
                 }, 1000);
 
@@ -523,7 +523,7 @@
                 }
             }
 
-            setTimeout(function() {
+            setTimeout(function () {
                 t.wrap.addClass('cbp-popup-singlePage-open');
             }, 20);
 
@@ -535,7 +535,7 @@
         },
 
 
-        openSinglePageInline: function(blocks, currentBlock, fromOpen) {
+        openSinglePageInline: function (blocks, currentBlock, fromOpen) {
 
             var t = this,
                 i = 0,
@@ -585,7 +585,7 @@
                 throw new Error('HEI! Your clicked element doesn\'t have a href attribute.');
             }
 
-            $.each(blocks.find(t.options.singlePageInlineDelegate), function(index, item) {
+            $.each(blocks.find(t.options.singlePageInlineDelegate), function (index, item) {
                 var href = item.getAttribute('href');
 
                 if ($.inArray(href, tempHref) === -1) {
@@ -684,7 +684,7 @@
 
         },
 
-        _resizeSinglePageInline: function(removeLoadingMask) {
+        _resizeSinglePageInline: function (removeLoadingMask) {
 
             var t = this,
                 customHeight;
@@ -727,7 +727,7 @@
         },
 
 
-        updateSinglePage: function(html) {
+        updateSinglePage: function (html) {
 
             var t = this,
                 selectorSlider;
@@ -755,7 +755,7 @@
         },
 
 
-        updateSinglePageInline: function(html) {
+        updateSinglePageInline: function (html) {
 
             var t = this,
                 selectorSlider;
@@ -779,7 +779,7 @@
         /**
          * Wait to load all images
          */
-        _loadSinglePageInline: function() {
+        _loadSinglePageInline: function () {
 
             var t = this,
                 imgs = [],
@@ -798,7 +798,7 @@
             }
 
             // get all elements
-            t.wrap.find('*').each(function() {
+            t.wrap.find('*').each(function () {
 
                 var elem = $(this);
 
@@ -829,7 +829,7 @@
                 t._resizeSinglePageInline(true);
             }
 
-            var loadImage = function() {
+            var loadImage = function () {
                 imgsLoaded++;
 
                 if (imgsLoaded == imgsLength) {
@@ -846,7 +846,7 @@
         },
 
 
-        isImage: function(el) {
+        isImage: function (el) {
 
             var t = this,
                 img = new Image();
@@ -855,7 +855,7 @@
 
             if ($('<img src="' + el.src + '">').is('img:uncached')) {
 
-                $(img).on('load' + eventNamespace + ' error' + eventNamespace, function() {
+                $(img).on('load' + eventNamespace + ' error' + eventNamespace, function () {
 
                     t.updateImagesMarkup(el.src, el.title, (t.current + 1) + ' of ' + t.counterTotal);
 
@@ -874,7 +874,7 @@
 
         },
 
-        isVimeo: function(el) {
+        isVimeo: function (el) {
 
             var t = this;
 
@@ -882,7 +882,7 @@
 
         },
 
-        isYoutube: function(el) {
+        isYoutube: function (el) {
 
             var t = this;
 
@@ -890,7 +890,7 @@
 
         },
 
-        isTed: function(el) {
+        isTed: function (el) {
 
             var t = this;
 
@@ -898,7 +898,7 @@
 
         },
 
-        isSelfHosted: function(el) {
+        isSelfHosted: function (el) {
 
             var t = this;
 
@@ -906,9 +906,10 @@
 
         },
 
-        updateSelfHostedVideo: function(src, title, counter) {
+        updateSelfHostedVideo: function (src, title, counter) {
 
-            var t = this, i;
+            var t = this,
+                i;
             t.wrap.addClass('cbp-popup-lightbox-isIframe');
 
             var markup = '<div class="cbp-popup-lightbox-iframe">' +
@@ -940,7 +941,7 @@
 
         },
 
-        updateVideoMarkup: function(src, title, counter) {
+        updateVideoMarkup: function (src, title, counter) {
 
             var t = this;
             t.wrap.addClass('cbp-popup-lightbox-isIframe');
@@ -961,7 +962,7 @@
 
         },
 
-        updateImagesMarkup: function(src, title, counter) {
+        updateImagesMarkup: function (src, title, counter) {
 
             var t = this;
 
@@ -985,7 +986,7 @@
 
         },
 
-        next: function() {
+        next: function () {
 
             var t = this;
 
@@ -993,7 +994,7 @@
 
         },
 
-        prev: function() {
+        prev: function () {
 
             var t = this;
 
@@ -1001,7 +1002,7 @@
 
         },
 
-        lightboxJumpTo: function(index) {
+        lightboxJumpTo: function (index) {
 
             var t = this,
                 el;
@@ -1017,7 +1018,7 @@
         },
 
 
-        singlePageJumpTo: function(index) {
+        singlePageJumpTo: function (index) {
 
             var t = this;
 
@@ -1039,7 +1040,7 @@
             }
         },
 
-        resetWrap: function() {
+        resetWrap: function () {
 
             var t = this;
 
@@ -1049,7 +1050,7 @@
 
         },
 
-        getIndex: function(index) {
+        getIndex: function (index) {
 
             var t = this;
 
@@ -1065,7 +1066,7 @@
 
         },
 
-        close: function(method, data) {
+        close: function (method, data) {
 
             var t = this;
 
@@ -1118,7 +1119,7 @@
 
                     } else {
 
-                        t.wrap.one(t.cubeportfolio.transitionEnd, function() {
+                        t.wrap.one(t.cubeportfolio.transitionEnd, function () {
 
                             // reset content
                             t.content.html('');
@@ -1152,7 +1153,7 @@
                 $(window).scrollTop(t.scrollTop);
 
                 // weird bug on mozilla. fixed with setTimeout
-                setTimeout(function() {
+                setTimeout(function () {
                     t.stopScroll = true;
 
                     t.navigationWrap.css({
@@ -1178,7 +1179,7 @@
 
                 }, 0);
 
-                t.wrap.one(t.cubeportfolio.transitionEnd, function() {
+                t.wrap.one(t.cubeportfolio.transitionEnd, function () {
 
                     // reset content
                     t.content.html('');
@@ -1214,7 +1215,7 @@
 
         },
 
-        tooggleLoading: function(state) {
+        tooggleLoading: function (state) {
 
             var t = this;
 
@@ -1223,7 +1224,7 @@
 
         },
 
-        resizeImage: function() {
+        resizeImage: function () {
 
             // if lightbox is not open go out
             if (!this.isOpen) return;
@@ -1236,7 +1237,7 @@
 
         },
 
-        preloadNearbyImages: function() {
+        preloadNearbyImages: function () {
 
             var arr = [],
                 img, t = this,
@@ -1275,7 +1276,7 @@
 
     var slider = {
 
-        _init: function(tt, obj) {
+        _init: function (tt, obj) {
 
             var t = this;
 
@@ -1296,7 +1297,7 @@
 
         },
 
-        _createMarkup: function() {
+        _createMarkup: function () {
 
             var t = this,
                 arrowWrap,
@@ -1347,11 +1348,11 @@
 
         },
 
-        _events: function() {
+        _events: function () {
 
             var t = this;
 
-            t.$obj.on('click' + eventNamespace, function(e) {
+            t.$obj.on('click' + eventNamespace, function (e) {
                 var action = $(e.target).attr('data-action');
 
                 if (t[action]) {
@@ -1362,19 +1363,19 @@
 
         },
 
-        nextItem: function() {
+        nextItem: function () {
 
             this.jumpTo(1);
 
         },
 
-        prevItem: function() {
+        prevItem: function () {
 
             this.jumpTo(-1);
 
         },
 
-        jumpToItem: function(e) {
+        jumpToItem: function (e) {
 
             var target = $(e.target);
 
@@ -1383,7 +1384,7 @@
             this.jumpTo(index - this.current);
         },
 
-        jumpTo: function(index) {
+        jumpTo: function (index) {
 
             var t = this,
                 item2,
@@ -1397,7 +1398,7 @@
 
             item2.animate({
                 opacity: 1
-            }, function() {
+            }, function () {
                 item1.removeClass('cbp-slider-item-current');
                 item2.removeClass('cbp-slider-item-next')
                     .addClass('cbp-slider-item-current')
@@ -1411,7 +1412,7 @@
 
         },
 
-        getIndex: function(index) {
+        getIndex: function (index) {
 
             // go to interval [0, (+ or -)this.counterTotal.length - 1]
             index = index % this.$liLength;
@@ -1433,7 +1434,7 @@
          * cubeportfolio initialization
          *
          */
-        _main: function(obj, options, callbackFunction) {
+        _main: function (obj, options, callbackFunction) {
             var t = this;
 
             // reset style queue
@@ -1510,7 +1511,7 @@
         /**
          * Get info about client browser
          */
-        _browserInfo: function() {
+        _browserInfo: function () {
 
             var t = this,
                 appVersion = navigator.appVersion,
@@ -1552,14 +1553,14 @@
                 MozTransition: 'transitionend',
                 OTransition: 'oTransitionEnd otransitionend',
                 transition: 'transitionend'
-            }[transition];
+            } [transition];
 
             t.animationEnd = {
                 WebkitAnimation: 'webkitAnimationEnd',
                 MozAnimation: 'Animationend',
                 OAnimation: 'oAnimationEnd oanimationend',
                 animation: 'animationend'
-            }[animation];
+            } [animation];
 
             t.supportCSSTransform = t._styleSupport('transform');
 
@@ -1575,7 +1576,7 @@
         /**
          * Feature testing for css3
          */
-        _styleSupport: function(prop) {
+        _styleSupport: function (prop) {
 
             var vendorProp, supportedProp, i,
                 // capitalize first character of the prop to test vendor prefix
@@ -1606,7 +1607,7 @@
         /**
          * Add hooks for jquery.css
          */
-        _cssHooks: function() {
+        _cssHooks: function () {
 
             var t = this,
                 transformCSS3;
@@ -1614,13 +1615,13 @@
             if (t._has3d()) { // 3d transform
 
                 transformCSS3 = {
-                    translate: function(x) {
+                    translate: function (x) {
                         return 'translate3d(' + x[0] + 'px, ' + x[1] + 'px, 0) ';
                     },
-                    scale: function(x) {
+                    scale: function (x) {
                         return 'scale3d(' + x + ', ' + x + ', 1) ';
                     },
-                    skew: function(x) {
+                    skew: function (x) {
                         return 'skew(' + x[0] + 'deg, ' + x[1] + 'deg) ';
                     }
                 };
@@ -1628,13 +1629,13 @@
             } else { // 2d transform
 
                 transformCSS3 = {
-                    translate: function(x) {
+                    translate: function (x) {
                         return 'translate(' + x[0] + 'px, ' + x[1] + 'px) ';
                     },
-                    scale: function(x) {
+                    scale: function (x) {
                         return 'scale(' + x + ') ';
                     },
-                    skew: function(x) {
+                    skew: function (x) {
                         return 'skew(' + x[0] + 'deg, ' + x[1] + 'deg) ';
                     }
                 };
@@ -1679,7 +1680,7 @@
             $.cssNumber.scale = true;
 
             $.cssHooks.scale = {
-                set: function(elem, value) {
+                set: function (elem, value) {
 
                     if (typeof value === 'string') {
                         value = parseFloat(value);
@@ -1688,7 +1689,7 @@
                     setTransformFn(elem, value, 'scale');
 
                 },
-                get: function(elem, computed) {
+                get: function (elem, computed) {
 
                     var transform = $.data(elem, 'transformFn');
                     return (transform && transform.scale) ? transform.scale : 1;
@@ -1696,7 +1697,7 @@
 
             };
 
-            $.fx.step.scale = function(fx) {
+            $.fx.step.scale = function (fx) {
                 $.cssHooks.scale.set(fx.elem, fx.now + fx.unit);
             };
 
@@ -1705,13 +1706,13 @@
             $.cssNumber.translate = true;
 
             $.cssHooks.translate = {
-                set: function(elem, value) {
+                set: function (elem, value) {
 
                     setTransformFn(elem, value, 'translate');
 
                 },
 
-                get: function(elem, computed) {
+                get: function (elem, computed) {
 
                     var transform = $.data(elem, 'transformFn');
                     return (transform && transform.translate) ? transform.translate : [0, 0];
@@ -1723,13 +1724,13 @@
             $.cssNumber.skew = true;
 
             $.cssHooks.skew = {
-                set: function(elem, value) {
+                set: function (elem, value) {
 
                     setTransformFn(elem, value, 'skew');
 
                 },
 
-                get: function(elem, computed) {
+                get: function (elem, computed) {
 
                     var transform = $.data(elem, 'transformFn');
                     return (transform && transform.skew) ? transform.skew : [0, 0];
@@ -1744,7 +1745,7 @@
          * Testing for CSS 3D Transforms Support
          * https://gist.github.com/lorenzopolidori/3794226
          */
-        _has3d: function() {
+        _has3d: function () {
             var el = document.createElement('p'),
                 has3d,
                 transforms = {
@@ -1774,7 +1775,7 @@
         /**
          * Prepare and store the blocks
          */
-        _prepareBlocks: function() {
+        _prepareBlocks: function () {
 
             var t = this,
                 element;
@@ -1796,7 +1797,7 @@
         /**
          * Init function for all captions
          */
-        _captionInit: function() {
+        _captionInit: function () {
 
             var t = this;
 
@@ -1810,7 +1811,7 @@
         /**
          * Destroy function for all captions
          */
-        _captionDestroy: function() {
+        _captionDestroy: function () {
 
             var t = this;
 
@@ -1821,11 +1822,11 @@
         },
 
 
-        _noneCaption: function() {
+        _noneCaption: function () {
 
         },
 
-        _noneCaptionDestroy: function() {
+        _noneCaptionDestroy: function () {
 
         },
 
@@ -1833,14 +1834,14 @@
         /**
          * Push Top hover effect
          */
-        _pushTopCaption: function() {
+        _pushTopCaption: function () {
 
             var t = this;
 
             // is legacy browser
             if (t.browser === 'ie8' || t.browser === 'ie9') {
 
-                $('.cbp-caption').on('mouseenter' + eventNamespace, function() {
+                $('.cbp-caption').on('mouseenter' + eventNamespace, function () {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap'),
@@ -1853,7 +1854,7 @@
                         bottom: 0
                     }, 'fast');
 
-                }).on('mouseleave' + eventNamespace, function(e) {
+                }).on('mouseleave' + eventNamespace, function (e) {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap'),
@@ -1876,7 +1877,7 @@
         /**
          * Push Top hover effect destroy
          */
-        _pushTopCaptionDestroy: function() {
+        _pushTopCaptionDestroy: function () {
 
             var t = this;
 
@@ -1893,14 +1894,14 @@
         /**
          * Push Down hover effect
          */
-        _pushDownCaption: function() {
+        _pushDownCaption: function () {
 
             var t = this;
 
             // is legacy browser
             if (t.browser === 'ie8' || t.browser === 'ie9') {
 
-                $('.cbp-caption').on('mouseenter' + eventNamespace, function() {
+                $('.cbp-caption').on('mouseenter' + eventNamespace, function () {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap'),
@@ -1913,7 +1914,7 @@
                         bottom: 0
                     }, 'fast');
 
-                }).on('mouseleave' + eventNamespace, function(e) {
+                }).on('mouseleave' + eventNamespace, function (e) {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap'),
@@ -1936,7 +1937,7 @@
         /**
          * Push Down hover effect destroy
          */
-        _pushDownCaptionDestroy: function() {
+        _pushDownCaptionDestroy: function () {
 
             var t = this;
 
@@ -1953,14 +1954,14 @@
         /**
          * Reveal Bottom hover effect
          */
-        _revealBottomCaption: function() {
+        _revealBottomCaption: function () {
 
             var t = this;
 
             // is legacy browser
             if (t.browser === 'ie8' || t.browser === 'ie9') {
 
-                $('.cbp-caption').on('mouseenter' + eventNamespace, function() {
+                $('.cbp-caption').on('mouseenter' + eventNamespace, function () {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap');
@@ -1969,7 +1970,7 @@
                         bottom: '100%'
                     }, 'fast');
 
-                }).on('mouseleave' + eventNamespace, function(e) {
+                }).on('mouseleave' + eventNamespace, function (e) {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap');
@@ -1988,7 +1989,7 @@
         /**
          * Reveal Bottom hover effect destroy
          */
-        _revealBottomCaptionDestroy: function() {
+        _revealBottomCaptionDestroy: function () {
 
             var t = this;
 
@@ -2004,14 +2005,14 @@
         /**
          * Reveal Top hover effect
          */
-        _revealTopCaption: function() {
+        _revealTopCaption: function () {
 
             var t = this;
 
             // is legacy browser
             if (t.browser === 'ie8' || t.browser === 'ie9') {
 
-                $('.cbp-caption').on('mouseenter' + eventNamespace, function() {
+                $('.cbp-caption').on('mouseenter' + eventNamespace, function () {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap');
@@ -2020,7 +2021,7 @@
                         bottom: '-100%'
                     }, 'fast');
 
-                }).on('mouseleave' + eventNamespace, function(e) {
+                }).on('mouseleave' + eventNamespace, function (e) {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap');
@@ -2039,7 +2040,7 @@
         /**
          * Reveal Top hover effect destroy
          */
-        _revealTopCaptionDestroy: function() {
+        _revealTopCaptionDestroy: function () {
 
             var t = this;
 
@@ -2055,14 +2056,14 @@
         /**
          * Overlay Bottom Reveal hover effect
          */
-        _overlayBottomRevealCaption: function() {
+        _overlayBottomRevealCaption: function () {
 
             var t = this;
 
             // is legacy browser
             if (t.browser === 'ie8' || t.browser === 'ie9') {
 
-                $('.cbp-caption').on('mouseenter' + eventNamespace, function() {
+                $('.cbp-caption').on('mouseenter' + eventNamespace, function () {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap'),
@@ -2072,7 +2073,7 @@
                         bottom: height
                     }, 'fast');
 
-                }).on('mouseleave' + eventNamespace, function(e) {
+                }).on('mouseleave' + eventNamespace, function (e) {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap');
@@ -2091,7 +2092,7 @@
         /**
          * Overlay Bottom Reveal hover effect destroy
          */
-        _overlayBottomRevealCaptionDestroy: function() {
+        _overlayBottomRevealCaptionDestroy: function () {
 
             var t = this;
 
@@ -2107,14 +2108,14 @@
         /**
          * Overlay Bottom Push hover effect
          */
-        _overlayBottomPushCaption: function() {
+        _overlayBottomPushCaption: function () {
 
             var t = this;
 
             // is legacy browser
             if (t.browser === 'ie8' || t.browser === 'ie9') {
 
-                $('.cbp-caption').on('mouseenter' + eventNamespace, function() {
+                $('.cbp-caption').on('mouseenter' + eventNamespace, function () {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap'),
@@ -2128,7 +2129,7 @@
                         bottom: 0
                     }, 'fast');
 
-                }).on('mouseleave' + eventNamespace, function(e) {
+                }).on('mouseleave' + eventNamespace, function (e) {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap'),
@@ -2152,7 +2153,7 @@
         /**
          * Push Up hover effect destroy
          */
-        _overlayBottomPushCaptionDestroy: function() {
+        _overlayBottomPushCaptionDestroy: function () {
 
             var t = this;
 
@@ -2169,20 +2170,20 @@
         /**
          * Overlay Bottom hover effect
          */
-        _overlayBottomCaption: function() {
+        _overlayBottomCaption: function () {
 
             var t = this;
 
             // is legacy browser
             if (t.browser === 'ie8' || t.browser === 'ie9') {
 
-                $('.cbp-caption').on('mouseenter' + eventNamespace, function() {
+                $('.cbp-caption').on('mouseenter' + eventNamespace, function () {
 
                     $(this).find('.cbp-caption-activeWrap').animate({
                         bottom: 0
                     }, 'fast');
 
-                }).on('mouseleave' + eventNamespace, function(e) {
+                }).on('mouseleave' + eventNamespace, function (e) {
 
                     var hover = $(this).find('.cbp-caption-activeWrap');
                     hover.animate({
@@ -2198,7 +2199,7 @@
         /**
          * Overlay Bottom hover effect destroy
          */
-        _overlayBottomCaptionDestroy: function() {
+        _overlayBottomCaptionDestroy: function () {
 
             var t = this;
 
@@ -2214,20 +2215,20 @@
         /**
          * Move Right hover effect
          */
-        _moveRightCaption: function() {
+        _moveRightCaption: function () {
 
             var t = this;
 
             // is legacy browser
             if (t.browser === 'ie8' || t.browser === 'ie9') {
 
-                $('.cbp-caption').on('mouseenter' + eventNamespace, function() {
+                $('.cbp-caption').on('mouseenter' + eventNamespace, function () {
 
                     $(this).find('.cbp-caption-activeWrap').animate({
                         left: 0
                     }, 'fast');
 
-                }).on('mouseleave' + eventNamespace, function() {
+                }).on('mouseleave' + eventNamespace, function () {
 
                     var hover = $(this).find('.cbp-caption-activeWrap');
                     hover.animate({
@@ -2243,7 +2244,7 @@
         /**
          * Move Right hover effect destroy
          */
-        _moveRightCaptionDestroy: function() {
+        _moveRightCaptionDestroy: function () {
 
             var t = this;
 
@@ -2259,20 +2260,20 @@
         /**
          * Reveal Left hover effect
          */
-        _revealLeftCaption: function() {
+        _revealLeftCaption: function () {
 
             var t = this;
 
             // is legacy browser
             if (t.browser === 'ie8' || t.browser === 'ie9') {
 
-                $('.cbp-caption').on('mouseenter' + eventNamespace, function() {
+                $('.cbp-caption').on('mouseenter' + eventNamespace, function () {
 
                     $(this).find('.cbp-caption-activeWrap').animate({
                         left: 0
                     }, 'fast');
 
-                }).on('mouseleave' + eventNamespace, function() {
+                }).on('mouseleave' + eventNamespace, function () {
 
                     var hover = $(this).find('.cbp-caption-activeWrap');
                     hover.animate({
@@ -2288,7 +2289,7 @@
         /**
          * Reveal Left hover effect destroy
          */
-        _revealLeftCaptionDestroy: function() {
+        _revealLeftCaptionDestroy: function () {
 
             var t = this;
 
@@ -2304,7 +2305,7 @@
         /**
          * Minimal hover effect
          */
-        _minimalCaption: function() {
+        _minimalCaption: function () {
 
             var t = this;
 
@@ -2313,7 +2314,7 @@
         /**
          * Minimal hover effect destroy
          */
-        _minimalCaptionDestroy: function() {
+        _minimalCaptionDestroy: function () {
 
             var t = this;
 
@@ -2323,7 +2324,7 @@
         /**
          * Fade hover effect
          */
-        _fadeInCaption: function() {
+        _fadeInCaption: function () {
 
             var t = this,
                 opacity;
@@ -2333,13 +2334,13 @@
 
                 opacity = (t.browser === 'ie9') ? 1 : 0.8;
 
-                $('.cbp-caption').on('mouseenter' + eventNamespace, function() {
+                $('.cbp-caption').on('mouseenter' + eventNamespace, function () {
 
                     $(this).find('.cbp-caption-activeWrap').animate({
                         opacity: opacity
                     }, 'fast');
 
-                }).on('mouseleave' + eventNamespace, function() {
+                }).on('mouseleave' + eventNamespace, function () {
 
                     $(this).find('.cbp-caption-activeWrap').animate({
                         opacity: 0
@@ -2354,7 +2355,7 @@
         /**
          * Fade hover effect destroy
          */
-        _fadeInCaptionDestroy: function() {
+        _fadeInCaptionDestroy: function () {
 
             var t = this;
 
@@ -2369,14 +2370,14 @@
         /**
          * Move Left hover effect
          */
-        _overlayRightAlongCaption: function() {
+        _overlayRightAlongCaption: function () {
 
             var t = this;
 
             // is legacy browser
             if (t.browser === 'ie8' || t.browser === 'ie9') {
 
-                $('.cbp-caption').on('mouseenter' + eventNamespace, function() {
+                $('.cbp-caption').on('mouseenter' + eventNamespace, function () {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap'),
@@ -2389,7 +2390,7 @@
                         left: 0
                     }, 'fast');
 
-                }).on('mouseleave' + eventNamespace, function(e) {
+                }).on('mouseleave' + eventNamespace, function (e) {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap'),
@@ -2411,7 +2412,7 @@
         /**
          * Move Left hover effect destroy
          */
-        _overlayRightAlongCaptionDestroy: function() {
+        _overlayRightAlongCaptionDestroy: function () {
 
             var t = this;
 
@@ -2427,14 +2428,14 @@
         /**
          * Overlay Bottom Along hover effect
          */
-        _overlayBottomAlongCaption: function() {
+        _overlayBottomAlongCaption: function () {
 
             var t = this;
 
             // is legacy browser
             if (t.browser === 'ie8' || t.browser === 'ie9') {
 
-                $('.cbp-caption').on('mouseenter' + eventNamespace, function() {
+                $('.cbp-caption').on('mouseenter' + eventNamespace, function () {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap'),
@@ -2447,7 +2448,7 @@
                         bottom: 0
                     }, 'fast');
 
-                }).on('mouseleave' + eventNamespace, function(e) {
+                }).on('mouseleave' + eventNamespace, function (e) {
 
                     var me = $(this),
                         normal = me.find('.cbp-caption-defaultWrap'),
@@ -2469,7 +2470,7 @@
         /**
          * Overlay Bottom Along hover effect destroy
          */
-        _overlayBottomAlongCaptionDestroy: function() {
+        _overlayBottomAlongCaptionDestroy: function () {
 
             var t = this;
 
@@ -2487,7 +2488,7 @@
         /**
          * Zoom hover effect
          */
-        _zoomCaption: function() {
+        _zoomCaption: function () {
 
             var t = this,
                 opacity;
@@ -2497,13 +2498,13 @@
 
                 opacity = (t.browser === 'ie9') ? 1 : 0.8;
 
-                $('.cbp-caption').on('mouseenter' + eventNamespace, function() {
+                $('.cbp-caption').on('mouseenter' + eventNamespace, function () {
 
                     $(this).find('.cbp-caption-activeWrap').animate({
                         opacity: opacity
                     }, 'fast');
 
-                }).on('mouseleave' + eventNamespace, function() {
+                }).on('mouseleave' + eventNamespace, function () {
 
                     $(this).find('.cbp-caption-activeWrap').animate({
                         opacity: 0
@@ -2518,7 +2519,7 @@
         /**
          * Zoom hover effect destroy
          */
-        _zoomCaptionDestroy: function() {
+        _zoomCaptionDestroy: function () {
 
             var t = this;
 
@@ -2534,19 +2535,19 @@
         /**
          * Init main components for plugin
          */
-        _initCSSandEvents: function() {
+        _initCSSandEvents: function () {
 
             var t = this,
                 n, width, currentWidth, windowWidth;
 
             // resize
-            $(window).on('resize' + eventNamespace, function() {
+            $(window).on('resize' + eventNamespace, function () {
 
                 if (n) {
                     clearTimeout(n);
                 }
 
-                n = setTimeout(function() {
+                n = setTimeout(function () {
 
                     if (t.browser === 'ie8') {
                         windowWidth = $(window).width();
@@ -2609,7 +2610,7 @@
         /**
          * Wait to load all images
          */
-        _load: function() {
+        _load: function () {
 
             var t = this,
                 imgs = [],
@@ -2628,7 +2629,7 @@
             }
 
             // get all elements
-            t.$obj.find('*').each(function() {
+            t.$obj.find('*').each(function () {
 
                 var elem = $(this);
 
@@ -2659,7 +2660,7 @@
                 t._beforeDisplay();
             }
 
-            var loadImage = function() {
+            var loadImage = function () {
                 imgsLoaded++;
 
                 if (imgsLoaded == imgsLength) {
@@ -2679,7 +2680,7 @@
         /**
          * Before display make some work
          */
-        _beforeDisplay: function() {
+        _beforeDisplay: function () {
 
             var t = this;
 
@@ -2701,7 +2702,7 @@
                     t._display();
                 } else {
 
-                    t.filter(t.options.defaultFilter, function() {
+                    t.filter(t.options.defaultFilter, function () {
                         t._display();
                     }, t);
 
@@ -2714,7 +2715,7 @@
         /**
          * Show the plugin
          */
-        _display: function() {
+        _display: function () {
 
             var t = this,
                 i, item;
@@ -2785,7 +2786,7 @@
             }
 
             // show main container
-            setTimeout(function() {
+            setTimeout(function () {
 
                 // remove loading class
                 t.$obj.removeClass('cbp-loading');
@@ -2810,7 +2811,7 @@
 
                 t.lightbox.init(t, 'lightbox');
 
-                t.$obj.on('click' + eventNamespace, t.options.lightboxDelegate, function(e) {
+                t.$obj.on('click' + eventNamespace, t.options.lightboxDelegate, function (e) {
 
                     t.lightbox.openLightbox(t.blocksAvailable, this);
 
@@ -2830,7 +2831,7 @@
 
                 t.singlePage.init(t, 'singlePage');
 
-                t.$obj.on('click' + eventNamespace, t.options.singlePageDelegate, function(e) {
+                t.$obj.on('click' + eventNamespace, t.options.singlePageDelegate, function (e) {
                     e.preventDefault();
 
                     t.singlePage.openSinglePage(t.blocksAvailable, this);
@@ -2849,7 +2850,7 @@
 
                 t.singlePageInline.init(t, 'singlePageInline');
 
-                t.$obj.on('click' + eventNamespace, t.options.singlePageInlineDelegate, function(e) {
+                t.$obj.on('click' + eventNamespace, t.options.singlePageInlineDelegate, function (e) {
 
                     t.singlePageInline.openSinglePageInline(t.blocksAvailable, this);
 
@@ -2864,14 +2865,14 @@
         /**
          * Build the layout
          */
-        _layout: function() {
+        _layout: function () {
 
             var t = this;
 
             // reset layout
             t._layoutReset();
 
-            t.blocksAvailable.each(function(index, el) {
+            t.blocksAvailable.each(function (index, el) {
 
                 var $me = $(el),
                     colNr = Math.ceil($me.outerWidth() / t.localColumnWidth),
@@ -2913,7 +2914,7 @@
         /**
          * Reset the layout
          */
-        _layoutReset: function() {
+        _layoutReset: function () {
 
             var c, t = this,
                 columnData;
@@ -2954,7 +2955,7 @@
         /**
          * Make this plugin responsive
          */
-        _responsiveLayout: function() {
+        _responsiveLayout: function () {
 
             var t = this,
                 procent, extra;
@@ -2982,7 +2983,7 @@
             procent = t.localColumnWidth / t.columnWidthCache;
 
 
-            t.blocks.each(function(index, el) {
+            t.blocks.each(function (index, el) {
 
                 var me = $(this),
                     data = $.data(this, 'cbp-wxh');
@@ -3002,7 +3003,7 @@
 
             if (t.blocksClone) {
 
-                t.blocksClone.each(function(index, el) {
+                t.blocksClone.each(function (index, el) {
 
                     var me = $(this),
                         data = $.data(this, 'cbp-wxh');
@@ -3026,7 +3027,7 @@
         /**
          * Resize main container vertically
          */
-        _resizeMainContainer: function(transition, customHeight) {
+        _resizeMainContainer: function (transition, customHeight) {
 
             var t = this;
 
@@ -3044,7 +3045,7 @@
         /**
          * Process style queue
          */
-        _processStyle: function(transition) {
+        _processStyle: function (transition) {
 
             var t = this;
 
@@ -3061,7 +3062,7 @@
         /**
          * Place the blocks in the correct order
          */
-        _placeBlocks: function($block, vert, singlePageInlineGap) {
+        _placeBlocks: function ($block, vert, singlePageInlineGap) {
 
             var t = this,
                 minVert = Math.min.apply(Math, vert),
@@ -3105,7 +3106,7 @@
         /**
          * Use position absolute with left and top
          */
-        _withCSS2: function(x, y) {
+        _withCSS2: function (x, y) {
             return {
                 left: x,
                 top: y
@@ -3116,7 +3117,7 @@
         /**
          * Use css3 translate function
          */
-        _withCSS3: function(x, y) {
+        _withCSS3: function (x, y) {
             return {
                 translate: [x, y]
             };
@@ -3131,7 +3132,7 @@
         /**
          * Duplicate the blocks in a new `ul`
          */
-        _duplicateContent: function(cssObj) {
+        _duplicateContent: function (cssObj) {
 
             var t = this;
 
@@ -3151,7 +3152,7 @@
         /**
          * FadeOut filter
          */
-        _fadeOutFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _fadeOutFilter: function (on2offBlocks, off2onBlocks, filter) {
 
             var t = this;
 
@@ -3203,7 +3204,7 @@
             t._resizeMainContainer(t.transition);
 
             // filter had finished his job
-            setTimeout(function() {
+            setTimeout(function () {
                 t._filterFinish();
             }, 400);
 
@@ -3213,7 +3214,7 @@
         /**
          * Quicksand filter
          */
-        _quicksandFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _quicksandFilter: function (on2offBlocks, off2onBlocks, filter) {
 
             var t = this;
 
@@ -3265,7 +3266,7 @@
             // resize main container height
             t._resizeMainContainer(t.transition);
 
-            setTimeout(function() {
+            setTimeout(function () {
                 t._filterFinish();
             }, 400);
 
@@ -3275,7 +3276,7 @@
         /**
          * flipOut filter
          */
-        _flipOutFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _flipOutFilter: function (on2offBlocks, off2onBlocks, filter) {
 
             var t = this;
 
@@ -3334,7 +3335,7 @@
             // resize main container height
             t._resizeMainContainer(t.transition);
 
-            setTimeout(function() {
+            setTimeout(function () {
                 t._filterFinish();
             }, 400);
 
@@ -3344,7 +3345,7 @@
         /**
          * flipBottom filter
          */
-        _flipBottomFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _flipBottomFilter: function (on2offBlocks, off2onBlocks, filter) {
 
             var t = this;
 
@@ -3404,7 +3405,7 @@
             // resize main container height
             t._resizeMainContainer(t.transition);
 
-            setTimeout(function() {
+            setTimeout(function () {
                 t._filterFinish();
             }, 400);
 
@@ -3414,7 +3415,7 @@
         /**
          * scaleSides filter
          */
-        _scaleSidesFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _scaleSidesFilter: function (on2offBlocks, off2onBlocks, filter) {
 
             var t = this;
 
@@ -3474,7 +3475,7 @@
             // resize main container height
             t._resizeMainContainer(t.transition);
 
-            setTimeout(function() {
+            setTimeout(function () {
                 t._filterFinish();
             }, 400);
 
@@ -3484,7 +3485,7 @@
         /**
          * skew filter
          */
-        _skewFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _skewFilter: function (on2offBlocks, off2onBlocks, filter) {
 
             var t = this;
 
@@ -3538,7 +3539,7 @@
             // resize main container height
             t._resizeMainContainer(t.transition);
 
-            setTimeout(function() {
+            setTimeout(function () {
                 t._filterFinish();
             }, 400);
 
@@ -3548,7 +3549,7 @@
         /**
          *  Slide Up Sequentially custom init
          */
-        _sequentiallyInit: function() {
+        _sequentiallyInit: function () {
 
             this.transitionByFilter = 'css';
 
@@ -3557,7 +3558,7 @@
         /**
          * Slide Up Sequentially filter
          */
-        _sequentiallyFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _sequentiallyFilter: function (on2offBlocks, off2onBlocks, filter) {
 
             var t = this,
                 tempBlocks = t.blocks,
@@ -3579,7 +3580,7 @@
                 });
             }
 
-            setTimeout(function() {
+            setTimeout(function () {
 
                 if (filter !== '*') {
 
@@ -3647,7 +3648,7 @@
 
                         setTimeout(displayItems, 130);
                     } else {
-                        setTimeout(function() {
+                        setTimeout(function () {
                             t._filterFinish();
                         }, 600);
                     }
@@ -3662,7 +3663,7 @@
         /**
          *  Fade Out Top custom init
          */
-        _fadeOutTopInit: function() {
+        _fadeOutTopInit: function () {
 
             this.transitionByFilter = 'css';
 
@@ -3671,7 +3672,7 @@
         /**
          * Slide Up filter
          */
-        _fadeOutTopFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _fadeOutTopFilter: function (on2offBlocks, off2onBlocks, filter) {
 
             var t = this;
 
@@ -3691,7 +3692,7 @@
 
             t.$obj.addClass('cbp-no-transition');
 
-            setTimeout(function() {
+            setTimeout(function () {
 
                 if (filter !== '*') {
 
@@ -3744,7 +3745,7 @@
                     });
                 }
 
-                setTimeout(function() {
+                setTimeout(function () {
                     t._filterFinish();
                 }, 400);
 
@@ -3756,7 +3757,7 @@
         /**
          *  Box Shadow custom init
          */
-        _boxShadowInit: function() {
+        _boxShadowInit: function () {
 
             var t = this;
 
@@ -3771,7 +3772,7 @@
         /**
          * boxShadow filter
          */
-        _boxShadowFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _boxShadowFilter: function (on2offBlocks, off2onBlocks, filter) {
 
             var t = this;
 
@@ -3830,7 +3831,7 @@
             t._layout();
 
             if (toAnimate.length) {
-                toAnimate.one(t.transitionEnd, function() {
+                toAnimate.one(t.transitionEnd, function () {
                     boxShadowMask.removeClass('cbp-animation-boxShadowShow');
                     t._filterFinish();
                 });
@@ -3851,7 +3852,7 @@
         /**
          *  Mover left custom init
          */
-        _bounceLeftInit: function() {
+        _bounceLeftInit: function () {
 
             var t = this;
 
@@ -3869,7 +3870,7 @@
         /**
          *  Mover left custom filter type
          */
-        _bounceLeftFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _bounceLeftFilter: function (on2offBlocks, off2onBlocks, filter) {
 
             var t = this,
                 ul, ulChildren, ulTohide;
@@ -3932,7 +3933,7 @@
             // resize main container height
             t._resizeMainContainer(t.transition);
 
-            setTimeout(function() {
+            setTimeout(function () {
                 t._filterFinish();
             }, 400);
 
@@ -3941,7 +3942,7 @@
         /**
          *  Bounce Top init
          */
-        _bounceTopInit: function() {
+        _bounceTopInit: function () {
 
             var t = this;
 
@@ -3959,7 +3960,7 @@
         /**
          *  Bounce Top filter type
          */
-        _bounceTopFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _bounceTopFilter: function (on2offBlocks, off2onBlocks, filter) {
 
             var t = this,
                 ul, ulChildren, ulTohide;
@@ -4022,7 +4023,7 @@
             // resize main container height
             t._resizeMainContainer(t.transition);
 
-            setTimeout(function() {
+            setTimeout(function () {
                 t._filterFinish();
             }, 400);
 
@@ -4032,7 +4033,7 @@
         /**
          *  Bounce Bottom init
          */
-        _bounceBottomInit: function() {
+        _bounceBottomInit: function () {
 
             var t = this;
 
@@ -4048,7 +4049,7 @@
         /**
          *  Bounce Bottom filter type
          */
-        _bounceBottomFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _bounceBottomFilter: function (on2offBlocks, off2onBlocks, filter) {
 
             var t = this,
                 ul, ulChildren, ulTohide;
@@ -4111,7 +4112,7 @@
             // resize main container height
             t._resizeMainContainer(t.transition);
 
-            setTimeout(function() {
+            setTimeout(function () {
                 t._filterFinish();
             }, 400);
         },
@@ -4120,7 +4121,7 @@
         /**
          *  Move Left init
          */
-        _moveLeftInit: function() {
+        _moveLeftInit: function () {
 
             var t = this;
 
@@ -4139,7 +4140,7 @@
         /**
          *  Move Left filter type
          */
-        _moveLeftFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _moveLeftFilter: function (on2offBlocks, off2onBlocks, filter) {
 
             var t = this,
                 ul, ulChildren, ulTohide;
@@ -4205,7 +4206,7 @@
                 });
 
 
-                ulTohide.one(t.transitionEnd, function() {
+                ulTohide.one(t.transitionEnd, function () {
 
                     ulTohide.addClass('no-trans').css({
                         left: '100%',
@@ -4221,7 +4222,7 @@
                 ul[t.transition]({
                     left: 0,
                     opacity: 1
-                }, function() {
+                }, function () {
 
                     ulTohide.addClass('no-trans').css({
                         left: '100%',
@@ -4247,7 +4248,7 @@
         /**
          *  Slide Left init
          */
-        _slideLeftInit: function() {
+        _slideLeftInit: function () {
 
             var t = this;
 
@@ -4265,7 +4266,7 @@
         /**
          *  Slide Left filter type
          */
-        _slideLeftFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _slideLeftFilter: function (on2offBlocks, off2onBlocks, filter) {
 
             var t = this,
                 ul, ulChildren, ulTohide, slideOut, slideIn, toAnimate;
@@ -4348,7 +4349,7 @@
                 toAnimate = slideOut.find('.cbp-item-wrapper').last();
 
                 if (toAnimate.length) {
-                    toAnimate.one(t.animationEnd, function() {
+                    toAnimate.one(t.animationEnd, function () {
                         t._filterFinish();
                     });
                 } else {
@@ -4360,7 +4361,8 @@
                 slideOut.find('.cbp-item-wrapper').animate({
                         left: '-100%'
                     },
-                    400, function() {
+                    400,
+                    function () {
                         t._filterFinish();
                     });
 
@@ -4386,7 +4388,7 @@
         /**
          *  Slide Delay init
          */
-        _slideDelayInit: function() {
+        _slideDelayInit: function () {
             this._wrapperFilterInit();
         },
 
@@ -4394,7 +4396,7 @@
         /**
          *  Slide Delay filter type
          */
-        _slideDelayFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _slideDelayFilter: function (on2offBlocks, off2onBlocks, filter) {
             this._wrapperFilter(on2offBlocks, off2onBlocks, filter, 'slideDelay', true);
         },
 
@@ -4402,7 +4404,7 @@
         /**
          *  3d Flip init
          */
-        _3dflipInit: function() {
+        _3dflipInit: function () {
             this._wrapperFilterInit();
         },
 
@@ -4410,7 +4412,7 @@
         /**
          *  3d Flip filter type
          */
-        _3dflipFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _3dflipFilter: function (on2offBlocks, off2onBlocks, filter) {
             this._wrapperFilter(on2offBlocks, off2onBlocks, filter, '3dflip', true);
         },
 
@@ -4418,7 +4420,7 @@
         /**
          *  Rotate Sides init
          */
-        _rotateSidesInit: function() {
+        _rotateSidesInit: function () {
             this._wrapperFilterInit();
         },
 
@@ -4426,7 +4428,7 @@
         /**
          *  Rotate Sides filter type
          */
-        _rotateSidesFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _rotateSidesFilter: function (on2offBlocks, off2onBlocks, filter) {
             this._wrapperFilter(on2offBlocks, off2onBlocks, filter, 'rotateSides', true);
         },
 
@@ -4434,7 +4436,7 @@
         /**
          *  Flip Out Delay init
          */
-        _flipOutDelayInit: function() {
+        _flipOutDelayInit: function () {
             this._wrapperFilterInit();
         },
 
@@ -4442,7 +4444,7 @@
         /**
          *  Flip Out Delay filter type
          */
-        _flipOutDelayFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _flipOutDelayFilter: function (on2offBlocks, off2onBlocks, filter) {
             this._wrapperFilter(on2offBlocks, off2onBlocks, filter, 'flipOutDelay', false);
         },
 
@@ -4450,7 +4452,7 @@
         /**
          *  Fold Left init
          */
-        _foldLeftInit: function() {
+        _foldLeftInit: function () {
             this._wrapperFilterInit();
         },
 
@@ -4458,7 +4460,7 @@
         /**
          *  Fold Left filter type
          */
-        _foldLeftFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _foldLeftFilter: function (on2offBlocks, off2onBlocks, filter) {
             this._wrapperFilter(on2offBlocks, off2onBlocks, filter, 'foldLeft', true);
         },
 
@@ -4466,7 +4468,7 @@
         /**
          *  Unfold init
          */
-        _unfoldInit: function() {
+        _unfoldInit: function () {
             this._wrapperFilterInit();
         },
 
@@ -4474,7 +4476,7 @@
         /**
          *  Unfold filter type
          */
-        _unfoldFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _unfoldFilter: function (on2offBlocks, off2onBlocks, filter) {
             this._wrapperFilter(on2offBlocks, off2onBlocks, filter, 'unfold', true);
         },
 
@@ -4482,7 +4484,7 @@
         /**
          *  Scale Down init
          */
-        _scaleDownInit: function() {
+        _scaleDownInit: function () {
             this._wrapperFilterInit();
         },
 
@@ -4490,7 +4492,7 @@
         /**
          *  Scale Down filter type
          */
-        _scaleDownFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _scaleDownFilter: function (on2offBlocks, off2onBlocks, filter) {
             this._wrapperFilter(on2offBlocks, off2onBlocks, filter, 'scaleDown', true);
         },
 
@@ -4498,7 +4500,7 @@
         /**
          *  Front Row init
          */
-        _frontRowInit: function() {
+        _frontRowInit: function () {
             this._wrapperFilterInit();
         },
 
@@ -4506,7 +4508,7 @@
         /**
          *  Front Row filter type
          */
-        _frontRowFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _frontRowFilter: function (on2offBlocks, off2onBlocks, filter) {
             this._wrapperFilter(on2offBlocks, off2onBlocks, filter, 'frontRow', true);
         },
 
@@ -4514,7 +4516,7 @@
         /**
          *  Rotate Room init
          */
-        _rotateRoomInit: function() {
+        _rotateRoomInit: function () {
             this._wrapperFilterInit();
         },
 
@@ -4522,7 +4524,7 @@
         /**
          *  Rotate Room filter type
          */
-        _rotateRoomFilter: function(on2offBlocks, off2onBlocks, filter) {
+        _rotateRoomFilter: function (on2offBlocks, off2onBlocks, filter) {
             this._wrapperFilter(on2offBlocks, off2onBlocks, filter, 'rotateRoom', true);
         },
 
@@ -4530,7 +4532,7 @@
         /**
          *  Wrapper Filter Init
          */
-        _wrapperFilterInit: function() {
+        _wrapperFilterInit: function () {
 
             var t = this;
 
@@ -4548,7 +4550,7 @@
         /**
          *  Wrapper Filter
          */
-        _wrapperFilter: function(on2offBlocks, off2onBlocks, filter, name, fadeOut) {
+        _wrapperFilter: function (on2offBlocks, off2onBlocks, filter, name, fadeOut) {
 
             var t = this,
                 ul, ulChildren, ulTohide, slideOut, slideIn, toAnimate;
@@ -4631,14 +4633,14 @@
                 var iii = 0,
                     kkk = 0;
 
-                slideIn.each(function(index, el) {
+                slideIn.each(function (index, el) {
                     $(el).find('.cbp-item-wrapper').addClass('cbp-animation-' + name + '-in').css('animation-delay', (kkk / 20) + 's');
                     kkk++;
 
                 });
 
 
-                slideOut.each(function(index, el) {
+                slideOut.each(function (index, el) {
 
                     if (kkk <= iii && fadeOut) {
                         $(el).find('.cbp-item-wrapper').addClass('cbp-animation-' + name + '-fadeOut');
@@ -4653,7 +4655,7 @@
                 toAnimate = slideOut.find('.cbp-item-wrapper').first();
 
                 if (toAnimate.length) {
-                    toAnimate.one(t.animationEnd, function() {
+                    toAnimate.one(t.animationEnd, function () {
                         t._filterFinish();
 
                         // ie10, ie11 bug
@@ -4679,7 +4681,8 @@
                 slideOut.find('.cbp-item-wrapper').animate({
                         left: '-100%'
                     },
-                    400, function() {
+                    400,
+                    function () {
                         t._filterFinish();
                     });
 
@@ -4701,7 +4704,7 @@
 
         },
 
-        _filterFinish: function() {
+        _filterFinish: function () {
 
             var t = this;
 
@@ -4716,7 +4719,7 @@
         /**
          *  Register event
          */
-        _registerEvent: function(name, callbackFunction, oneTime) {
+        _registerEvent: function (name, callbackFunction, oneTime) {
 
             var t = this;
 
@@ -4739,7 +4742,7 @@
         /**
          *  Trigger event
          */
-        _triggerEvent: function(name) {
+        _triggerEvent: function (name) {
 
             var t = this;
 
@@ -4767,7 +4770,7 @@
         /*
          * Initializate the plugin
          */
-        init: function(options, callbackFunction) {
+        init: function (options, callbackFunction) {
 
             var t = $.data(this, 'cubeportfolio');
 
@@ -4787,7 +4790,7 @@
         /*
          * Destroy the plugin
          */
-        destroy: function(callbackFunction) {
+        destroy: function (callbackFunction) {
 
             var t = $.data(this, 'cubeportfolio');
             if (!t) {
@@ -4803,7 +4806,7 @@
             $.removeData(this, 'cubeportfolio');
 
             // remove data from blocks
-            $.each(t.blocks, function(index, value) {
+            $.each(t.blocks, function (index, value) {
 
                 $.removeData(this, 'transformFn');
 
@@ -4872,7 +4875,7 @@
         /*
          * Filter the plugin by filterName
          */
-        filter: function(filterName, callbackFunction, context) {
+        filter: function (filterName, callbackFunction, context) {
 
             var t = context || $.data(this, 'cubeportfolio'),
                 off2onBlocks, on2offBlocks;
@@ -4911,7 +4914,7 @@
 
             if (t.singlePageInline && t.singlePageInline.isOpen) {
                 t.singlePageInline.close('promise', {
-                    callback: function() {
+                    callback: function () {
                         t['_' + t.options.animationType + 'Filter'](on2offBlocks, off2onBlocks, filterName);
                     }
                 });
@@ -4924,7 +4927,7 @@
         /*
          * Show counter for filters
          */
-        showCounter: function(elems) {
+        showCounter: function (elems) {
 
             var t = $.data(this, 'cubeportfolio');
 
@@ -4934,7 +4937,7 @@
 
             t.elems = elems;
 
-            $.each(elems, function(index, val) {
+            $.each(elems, function (index, val) {
 
                 var me = $(this),
                     filterName = me.data('filter'),
@@ -4954,7 +4957,7 @@
         /*
          * ApendItems elements
          */
-        appendItems: function(items, callbackFunction) {
+        appendItems: function (items, callbackFunction) {
 
             var me = this,
                 t = $.data(me, 'cubeportfolio'),
@@ -4966,7 +4969,7 @@
 
             if (t.singlePageInline && t.singlePageInline.isOpen) {
                 t.singlePageInline.close('promise', {
-                    callback: function() {
+                    callback: function () {
                         pluginObject._addItems.call(me, items, callbackFunction);
                     }
                 });
@@ -4978,7 +4981,7 @@
 
         },
 
-        _addItems: function(items, callbackFunction) {
+        _addItems: function (items, callbackFunction) {
 
             var t = $.data(this, 'cubeportfolio'),
                 defaultFilter, children, cloneItems, fewItems;
@@ -5082,7 +5085,7 @@
 
             fewItems.animate({
                 opacity: 1
-            }, 800, function() {
+            }, 800, function () {
 
                 switch (t.options.animationType) {
 
@@ -5106,7 +5109,7 @@
                 pluginObject.showCounter.call(this, t.elems);
             }
 
-            setTimeout(function() {
+            setTimeout(function () {
                 t._triggerEvent('appendItemsFinish');
             }, 900);
 
@@ -5116,11 +5119,11 @@
     /**
      * jQuery plugin initializer
      */
-    $.fn.cubeportfolio = function(method) {
+    $.fn.cubeportfolio = function (method) {
 
         var args = arguments;
 
-        return this.each(function() {
+        return this.each(function () {
 
             // public method calling
             if (pluginObject[method]) {
@@ -5290,7 +5293,7 @@
          *  @param element = the item clicked
          *  Values: function
          */
-        singlePageCallback: function(url, element) {
+        singlePageCallback: function (url, element) {
 
             // to update singlePage content use the following method: this.updateSinglePage(yourContent)
 
@@ -5323,7 +5326,7 @@
          *  @param element = the item clicked
          *  Values: function
          */
-        singlePageInlineCallback: function(url, element) {
+        singlePageInlineCallback: function (url, element) {
 
             // to update singlePage Inline content use the following method: this.updateSinglePageInline(yourContent)
 

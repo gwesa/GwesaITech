@@ -141,21 +141,21 @@
         </div>
     </section>
 
-    <!-- Section: services -->
+    <!-- Section: Services -->
     @include('pages.services.service')
-    <!-- /Section: services -->
+    <!-- /Section: Services -->
 
-    <!-- Section: team -->
+    <!-- Section: Team -->
     @include('pages.team.team')
-    <!-- /Section: team -->
+    <!-- /Section: Team -->
 
-    <!-- Section: works -->
+    <!-- Section: Resources -->
     @include('pages.resources.resources')
-    <!-- /Section: works -->
+    <!-- /Section: Resources -->
 
-    <!-- Section: testimonial -->
-    
-    <!-- /Section: testimonial -->
+    {{-- <!-- Section: Projects -->
+    @include('pages.project.project')
+    <!-- /Section: Projects --> --}}
 
     <!-- Section: pricing -->
     @include('pages.pricing.pricing')

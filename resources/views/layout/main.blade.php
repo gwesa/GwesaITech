@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Medicio landing page template for Health niche</title>
+    <title>GwesaITech - Home Page</title>
 
     @include('includes.include_css')
 </head>

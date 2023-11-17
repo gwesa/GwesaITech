@@ -28,15 +28,16 @@
 .cbp-l-filters-list,
 .cbp-l-filters-list * {
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            outline: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
 }
 
 .cbp,
 .cbp-wrapper,
 .cbp-item {
-    filter: inherit; /* ie8 bug on fadeOut*/
+    filter: inherit;
+    /* ie8 bug on fadeOut*/
 }
 
 .cbp {
@@ -66,8 +67,10 @@
 .cbp .cbp-item {
     z-index: 2;
     display: block;
-    width: 300px; /* default width for blocks */
-    height: 200px; /* default height for blocks */
+    width: 300px;
+    /* default width for blocks */
+    height: 200px;
+    /* default height for blocks */
 }
 
 .cbp-item-wrapper {
@@ -93,18 +96,18 @@
 .cbp-loading *,
 .cbp-no-transition .cbp-item {
     -webkit-transition: none !important;
-            transition: none !important;
+    transition: none !important;
 }
 
 .cbp-appendItems-loading {
     /*overflow: visible;*/
     -webkit-transition: height .4s ease !important;
-            transition: height .4s ease !important;
+    transition: height .4s ease !important;
 }
 
 .cbp-appendItems-loading .cbp-wrapper {
     -webkit-transition: none !important;
-            transition: none !important;
+    transition: none !important;
 }
 
 .cbp-loading {
@@ -157,6 +160,7 @@
 .cbp-caption-activeWrap {
     z-index: 2;
 }
+
 /*  END - Default style for plugin. Please change them carefully! */
 
 
@@ -204,6 +208,7 @@
     text-decoration: none;
     color: #fff;
 }
+
 /*  END - caption miscellaneous style */
 
 
@@ -244,23 +249,23 @@
     opacity: 0;
 
     -webkit-transition: -webkit-transform .5s ease;
-            transition:         transform .5s ease;
+    transition: transform .5s ease;
 }
 
 .cbp-caption-minimal .cbp-l-caption-title {
     /* @editable properties */
     -webkit-transform: translateY(-100%);
-       -moz-transform: translateY(-100%);
-         -o-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
 }
 
 .cbp-caption-minimal .cbp-l-caption-desc {
     /* @editable properties */
     -webkit-transform: translateY(100%);
-       -moz-transform: translateY(100%);
-         -o-transform: translateY(100%);
-            transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
 }
 
 .cbp-caption-minimal .cbp-caption:hover .cbp-l-caption-title,
@@ -269,10 +274,11 @@
     opacity: 1;
 
     -webkit-transform: translateY(0);
-       -moz-transform: translateY(0);
-         -o-transform: translateY(0);
-            transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
 }
+
 /* <<< minimal style caption */
 /*  END - caption layout align left */
 
@@ -299,7 +305,7 @@
 
     /* @editable properties */
     -webkit-transition: left .4s cubic-bezier(.190, 1.000, .220, 1.000);
-            transition: left .4s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: left .4s cubic-bezier(.190, 1.000, .220, 1.000);
 }
 
 .cbp-caption-overlayBottom .cbp-l-caption-alignCenter .cbp-l-caption-buttonLeft,
@@ -332,6 +338,7 @@
     /* @editable properties */
     left: 0;
 }
+
 /*  END - caption layout center vertically and horizontally */
 
 
@@ -353,7 +360,7 @@
 
     /*@editable properties */
     -webkit-transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
-            transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
 }
 
 .cbp-caption-pushTop .cbp-caption-activeWrap {
@@ -382,6 +389,7 @@
 .cbp-caption-pushTop.cbp-ie9 .cbp-caption:hover .cbp-caption-activeWrap {
     bottom: -100%;
 }
+
 /*  END - pushTop caption */
 
 
@@ -394,7 +402,7 @@
 
     /*@editable properties */
     -webkit-transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
-            transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
 }
 
 .cbp-caption-pushDown .cbp-caption-activeWrap {
@@ -423,6 +431,7 @@
 .cbp-caption-pushDown.cbp-ie9 .cbp-caption:hover .cbp-caption-activeWrap {
     bottom: 100%;
 }
+
 /*  END - pushDown caption */
 
 
@@ -436,7 +445,7 @@
 
     /*@editable properties */
     -webkit-transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
-            transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
 }
 
 .cbp-caption-revealBottom .cbp-caption-activeWrap {
@@ -456,6 +465,7 @@
 .cbp-caption-revealBottom.cbp-ie9 .cbp-caption:hover .cbp-caption-defaultWrap {
     bottom: 0;
 }
+
 /*  END - revealBottom caption */
 
 
@@ -469,7 +479,7 @@
 
     /*@editable properties */
     -webkit-transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
-            transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
 }
 
 .cbp-caption-revealTop .cbp-caption-activeWrap {
@@ -489,6 +499,7 @@
 .cbp-caption-revealTop.cbp-ie9 .cbp-caption:hover .cbp-caption-defaultWrap {
     bottom: 0;
 }
+
 /*  END - revealTop caption */
 
 
@@ -502,7 +513,7 @@
 
     /*@editable properties */
     -webkit-transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
-            transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
 }
 
 .cbp-caption-overlayBottomReveal .cbp-caption-activeWrap {
@@ -524,6 +535,7 @@
 .cbp-caption-overlayBottomReveal.cbp-ie9 .cbp-caption:hover .cbp-caption-defaultWrap {
     bottom: 0;
 }
+
 /*  END - overlayBottomReveal caption */
 
 
@@ -537,7 +549,7 @@
 
     /*@editable properties */
     -webkit-transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
-            transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
 }
 
 .cbp-caption-overlayBottomPush .cbp-caption-activeWrap {
@@ -568,6 +580,7 @@
     /* @editable properties */
     bottom: -70px;
 }
+
 /*  END - overlayBottomPush caption */
 
 
@@ -582,7 +595,7 @@
     background-color: rgb(24, 22, 22);
     background-color: rgba(24, 22, 22, .7);
     -webkit-transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
-            transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
 }
 
 .cbp-caption-overlayBottom .cbp-caption:hover .cbp-caption-activeWrap {
@@ -594,6 +607,7 @@
     /*@editable properties */
     bottom: -70px;
 }
+
 /*  END - overlayBottom caption */
 
 
@@ -609,7 +623,7 @@
     background: none repeat scroll 0 0 #282727;
 
     -webkit-transition: left .6s cubic-bezier(.190, 1.000, .220, 1.000);
-            transition: left .6s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: left .6s cubic-bezier(.190, 1.000, .220, 1.000);
 }
 
 .cbp-caption-moveRight .cbp-caption:hover .cbp-caption-activeWrap {
@@ -621,6 +635,7 @@
 .cbp-caption-moveRight.cbp-ie9 .cbp-caption:hover .cbp-caption-activeWrap {
     left: -100%;
 }
+
 /*  END - moveRight caption */
 
 
@@ -636,7 +651,7 @@
     background: none repeat scroll 0 0 #282727;
 
     -webkit-transition: left .6s cubic-bezier(.190, 1.000, .220, 1.000);
-            transition: left .6s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: left .6s cubic-bezier(.190, 1.000, .220, 1.000);
 }
 
 .cbp-caption-revealLeft .cbp-caption:hover .cbp-caption-activeWrap {
@@ -648,6 +663,7 @@
 .cbp-caption-revealLeft.cbp-ie9 .cbp-caption:hover .cbp-caption-activeWrap {
     left: 100%;
 }
+
 /*  END - revealLeft caption */
 
 
@@ -672,9 +688,10 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 
-.cbp-caption-minimal.cbp-ie8 .cbp-caption:hover  .cbp-caption-activeWrap {
+.cbp-caption-minimal.cbp-ie8 .cbp-caption:hover .cbp-caption-activeWrap {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
 }
+
 /*  END - minimal caption */
 
 
@@ -693,7 +710,7 @@
     /* @editable properties */
     background-color: rgba(0, 0, 0, .85);
     -webkit-transition: opacity .6s cubic-bezier(.190, 1.000, .220, 1.000);
-            transition: opacity .6s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: opacity .6s cubic-bezier(.190, 1.000, .220, 1.000);
 }
 
 .cbp-caption-fadeIn.cbp-ie8 .cbp-caption-activeWrap {
@@ -711,6 +728,7 @@
     /* @editable properties */
     opacity: 0;
 }
+
 /*  END - fade caption */
 
 
@@ -724,7 +742,7 @@
 
     /*@editable properties */
     -webkit-transition: left .6s cubic-bezier(.190, 1.000, .220, 1.000);
-            transition: left .6s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: left .6s cubic-bezier(.190, 1.000, .220, 1.000);
 }
 
 .cbp-caption-overlayRightAlong .cbp-caption-activeWrap {
@@ -755,6 +773,7 @@
     /* @editable properties */
     left: -50%;
 }
+
 /*  END - overlayRightAlong caption */
 
 
@@ -768,7 +787,7 @@
 
     /*@editable properties */
     -webkit-transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
-            transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: bottom .6s cubic-bezier(.190, 1.000, .220, 1.000);
 }
 
 .cbp-caption-overlayBottomAlong .cbp-caption-activeWrap {
@@ -798,6 +817,7 @@
 .cbp-caption-overlayBottomAlong.cbp-ie9 .cbp-caption:hover .cbp-caption-activeWrap {
     bottom: -70px;
 }
+
 /*  END - overlayBottomAlong caption */
 
 
@@ -812,15 +832,15 @@
 
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s cubic-bezier(.190, 1.000, .220, 1.000);
-            transition:         transform .6s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: transform .6s cubic-bezier(.190, 1.000, .220, 1.000);
 }
 
 .cbp-caption-zoom .cbp-caption:hover .cbp-caption-defaultWrap {
     /* @editable properties */
     -webkit-transform: scale(1.25);
-       -moz-transform: scale(1.25);
-         -o-transform: scale(1.25);
-            transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    transform: scale(1.25);
 }
 
 .cbp-caption-zoom .cbp-caption-activeWrap {
@@ -834,7 +854,7 @@
     /* @editable properties */
     background-color: rgba(0, 0, 0, .9);
     -webkit-transition: opacity .8s cubic-bezier(.190, 1.000, .220, 1.000);
-            transition: opacity .8s cubic-bezier(.190, 1.000, .220, 1.000);
+    transition: opacity .8s cubic-bezier(.190, 1.000, .220, 1.000);
 }
 
 .cbp-caption-zoom.cbp-ie8 .cbp-caption-activeWrap {
@@ -852,6 +872,7 @@
     /* @editable properties */
     opacity: 0;
 }
+
 /*  END - zoom caption */
 
 
@@ -862,21 +883,22 @@
 .cbp-animation-fadeOut {
     /* @editable properties */
     -webkit-transition: height .6s ease-in-out;
-            transition: height .6s ease-in-out;
+    transition: height .6s ease-in-out;
 }
 
 .cbp-animation-fadeOut .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out .2s, opacity .6s ease-in-out .2s;
-            transition:         transform .6s ease-in-out .2s, opacity .6s ease-in-out .2s;
+    transition: transform .6s ease-in-out .2s, opacity .6s ease-in-out .2s;
 }
 
 /* items that will be hidden */
 .cbp-animation-fadeOut .cbp-item-hidden {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out 0s, opacity .4s ease-in-out 0s;
-            transition:         transform .6s ease-in-out 0s, opacity .4s ease-in-out 0s;
+    transition: transform .6s ease-in-out 0s, opacity .4s ease-in-out 0s;
 }
+
 /*  END - Animation options for `fadeOut` filter. Change them carefully */
 
 
@@ -887,21 +909,22 @@
 .cbp-animation-quicksand {
     /* @editable properties */
     -webkit-transition: height .6s ease-in-out;
-            transition: height .6s ease-in-out;
+    transition: height .6s ease-in-out;
 }
 
 .cbp-animation-quicksand .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out .2s, opacity .6s ease-in-out .2s;
-            transition:         transform .6s ease-in-out .2s, opacity .6s ease-in-out .2s;
+    transition: transform .6s ease-in-out .2s, opacity .6s ease-in-out .2s;
 }
 
 /* items that will be hidden */
 .cbp-animation-quicksand .cbp-item-hidden {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out 0s, opacity .4s ease-in-out 0s;
-            transition:         transform .6s ease-in-out 0s, opacity .4s ease-in-out 0s;
+    transition: transform .6s ease-in-out 0s, opacity .4s ease-in-out 0s;
 }
+
 /*  END - Animation options for `quicksand` filter. Change them carefully */
 
 
@@ -912,21 +935,22 @@
 .cbp-animation-skew {
     /* @editable properties */
     -webkit-transition: height .3s ease-in-out;
-            transition: height .3s ease-in-out;
+    transition: height .3s ease-in-out;
 }
 
 .cbp-animation-skew .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .3s ease-in, opacity .3s ease-in;
-            transition:         transform .3s ease-in, opacity .3s ease-in;
+    transition: transform .3s ease-in, opacity .3s ease-in;
 }
 
 /* items that will be hidden */
 .cbp-animation-skew .cbp-item-hidden {
     /* @editable properties */
     -webkit-transition: -webkit-transform .3s ease-in 0s, opacity .3s ease-in 0s;
-            transition:         transform .3s ease-in 0s, opacity .3s ease-in 0s;
+    transition: transform .3s ease-in 0s, opacity .3s ease-in 0s;
 }
+
 /*  END - Animation options for `skew` filter. Change them carefully */
 
 
@@ -937,13 +961,13 @@
 .cbp-animation-boxShadow {
     /* @editable properties */
     -webkit-transition: height .6s ease-in-out;
-            transition: height .6s ease-in-out;
+    transition: height .6s ease-in-out;
 }
 
 .cbp-animation-boxShadow .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out, opacity .6s ease-in-out;
-            transition:         transform .6s ease-in-out, opacity .6s ease-in-out;
+    transition: transform .6s ease-in-out, opacity .6s ease-in-out;
 }
 
 .cbp-animation-boxShadow .cbp-item .cbp-animation-boxShadowMask {
@@ -955,8 +979,8 @@
     z-index: -1;
 
     /* @editable properties */
-    -webkit-transition:box-shadow .6s ease-in-out;
-            transition:box-shadow .6s ease-in-out;
+    -webkit-transition: box-shadow .6s ease-in-out;
+    transition: box-shadow .6s ease-in-out;
 }
 
 .cbp-animation-boxShadow .cbp-item .cbp-animation-boxShadowMask.cbp-animation-boxShadowShow {
@@ -972,6 +996,7 @@
     /* @editable properties */
     box-shadow: 0 0 0 0 #fff inset;
 }
+
 /*  END - Animation options for `boxShadow` filter. Change them carefully */
 
 
@@ -982,13 +1007,13 @@
 .cbp-animation-bounceLeft {
     /* @editable properties */
     -webkit-transition: height .8s ease-in-out;
-            transition: height .8s ease-in-out;
+    transition: height .8s ease-in-out;
 }
 
 .cbp-animation-bounceLeft .cbp-wrapper {
     /* @editable properties */
     -webkit-transition: opacity .8s ease-in-out, left .8s ease-in-out;
-            transition: opacity .8s ease-in-out, left .8s ease-in-out;
+    transition: opacity .8s ease-in-out, left .8s ease-in-out;
 }
 
 .cbp-animation-bounceLeft .cbp-item {
@@ -997,7 +1022,7 @@
 
     /* @editable properties */
     -webkit-transition: -webkit-transform .8s ease-in-out;
-            transition:         transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
 }
 
 .cbp-animation-bounceLeft .cbp-item-hidden {
@@ -1008,6 +1033,7 @@
     /* mozilla <=25 bug*/
     overflow: hidden;
 }
+
 /*  END - Animation options for `bounceLeft` filter. Change them carefully */
 
 
@@ -1017,13 +1043,13 @@
 .cbp-animation-bounceTop {
     /* @editable properties */
     -webkit-transition: height .6s ease-in-out;
-            transition: height .6s ease-in-out;
+    transition: height .6s ease-in-out;
 }
 
 .cbp-animation-bounceTop .cbp-wrapper {
     /* @editable properties */
     -webkit-transition: opacity .6s ease-in-out, top .6s ease-in-out;
-            transition: opacity .6s ease-in-out, top .6s ease-in-out;
+    transition: opacity .6s ease-in-out, top .6s ease-in-out;
 }
 
 .cbp-animation-bounceTop .cbp-item {
@@ -1032,7 +1058,7 @@
 
     /* @editable properties */
     -webkit-transition: -webkit-transform .8s ease-in-out;
-            transition:         transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
 }
 
 .cbp-animation-bounceTop .cbp-item-hidden {
@@ -1043,6 +1069,7 @@
     /* mozilla <=25 bug*/
     overflow: hidden;
 }
+
 /*  END - Animation options for `bounceTop` filter. Change them carefully */
 
 
@@ -1053,13 +1080,13 @@
 .cbp-animation-bounceBottom {
     /* @editable properties */
     -webkit-transition: height .6s ease-in-out;
-            transition: height .6s ease-in-out;
+    transition: height .6s ease-in-out;
 }
 
 .cbp-animation-bounceBottom .cbp-wrapper {
     /* @editable properties */
     -webkit-transition: opacity .6s ease-in-out, top .6s ease-in-out;
-            transition: opacity .6s ease-in-out, top .6s ease-in-out;
+    transition: opacity .6s ease-in-out, top .6s ease-in-out;
 }
 
 .cbp-animation-bounceBottom .cbp-item {
@@ -1068,7 +1095,7 @@
 
     /* @editable properties */
     -webkit-transition: -webkit-transform .8s ease-in-out;
-            transition:         transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
 }
 
 .cbp-animation-bounceBottom .cbp-item-hidden {
@@ -1079,6 +1106,7 @@
     /* mozilla <=25 bug*/
     overflow: hidden;
 }
+
 /*  END - Animation options for `bounceBottom` filter. Change them carefully */
 
 
@@ -1089,7 +1117,7 @@
 .cbp-animation-moveLeft {
     /* @editable properties */
     -webkit-transition: height .6s ease-in-out;
-            transition: height .6s ease-in-out;
+    transition: height .6s ease-in-out;
 }
 
 .cbp-animation-moveLeft .cbp-wrapper {
@@ -1097,13 +1125,13 @@
 
     /* @editable properties */
     -webkit-transition: opacity .6s ease-in-out, left .6s ease-in-out;
-            transition: opacity .6s ease-in-out, left .6s ease-in-out;
+    transition: opacity .6s ease-in-out, left .6s ease-in-out;
 }
 
 .cbp-animation-moveLeft .cbp-wrapper.no-trans {
     z-index: 1;
     -webkit-transition: none !important;
-            transition: none !important;
+    transition: none !important;
 }
 
 .cbp-animation-moveLeft .cbp-item {
@@ -1112,13 +1140,14 @@
 
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out;
-            transition:         transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
 }
 
 .cbp-animation-moveLeft .cbp-item-wrapper {
     /* mozilla <=25 bug*/
     overflow: hidden;
 }
+
 /*  END - Animation options for `moveLeft` filter. Change them carefully */
 
 
@@ -1133,7 +1162,7 @@
 .cbp-animation-slideLeft .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out;
-            transition:         transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
 }
 
 .cbp-animation-slideLeft-out {
@@ -1151,38 +1180,115 @@
 /* out */
 /* @editable properties */
 @-webkit-keyframes cbp-animation-slideLeft-out {
-    25% { opacity: .75; -webkit-transform: scale(.8); }
-    75% { opacity: .75; -webkit-transform: scale(.8) translateX(-200%); }
-    100% { opacity: .75; -webkit-transform: scale(.8) translateX(-200%); }
+    25% {
+        opacity: .75;
+        -webkit-transform: scale(.8);
+    }
+
+    75% {
+        opacity: .75;
+        -webkit-transform: scale(.8) translateX(-200%);
+    }
+
+    100% {
+        opacity: .75;
+        -webkit-transform: scale(.8) translateX(-200%);
+    }
 }
+
 @-moz-keyframes cbp-animation-slideLeft-out {
-    25% { opacity: .75; -moz-transform: scale(.8); }
-    75% { opacity: .75; -moz-transform: scale(.8) translateX(-200%); }
-    100% { opacity: .75; -moz-transform: scale(.8) translateX(-200%); }
+    25% {
+        opacity: .75;
+        -moz-transform: scale(.8);
+    }
+
+    75% {
+        opacity: .75;
+        -moz-transform: scale(.8) translateX(-200%);
+    }
+
+    100% {
+        opacity: .75;
+        -moz-transform: scale(.8) translateX(-200%);
+    }
 }
+
 @keyframes cbp-animation-slideLeft-out {
-    25% { opacity: .75; transform: scale(.8); }
-    75% { opacity: .75; transform: scale(.8) translateX(-200%); }
-    100% { opacity: .75; transform: scale(.8) translateX(-200%); }
+    25% {
+        opacity: .75;
+        transform: scale(.8);
+    }
+
+    75% {
+        opacity: .75;
+        transform: scale(.8) translateX(-200%);
+    }
+
+    100% {
+        opacity: .75;
+        transform: scale(.8) translateX(-200%);
+    }
 }
 
 /* in */
 /* @editable properties */
 @-webkit-keyframes cbp-animation-slideLeft-in {
-    0%, 25% { opacity: .75; -webkit-transform: scale(.8) translateX(200%); }
-    75% { opacity: .75; -webkit-transform: scale(.8); }
-    100% { opacity: 1; -webkit-transform: scale(1) translateX(0); }
+
+    0%,
+    25% {
+        opacity: .75;
+        -webkit-transform: scale(.8) translateX(200%);
+    }
+
+    75% {
+        opacity: .75;
+        -webkit-transform: scale(.8);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1) translateX(0);
+    }
 }
+
 @-moz-keyframes cbp-animation-slideLeft-in {
-    0%, 25% { opacity: .75; -moz-transform: scale(.8) translateX(200%); }
-    75% { opacity: .75; -moz-transform: scale(.8); }
-    100% { opacity: 1; -moz-transform: scale(1) translateX(0); }
+
+    0%,
+    25% {
+        opacity: .75;
+        -moz-transform: scale(.8) translateX(200%);
+    }
+
+    75% {
+        opacity: .75;
+        -moz-transform: scale(.8);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: scale(1) translateX(0);
+    }
 }
+
 @keyframes cbp-animation-slideLeft-in {
-    0%, 25% { opacity: .75; transform: scale(.8) translateX(200%); }
-    75% { opacity: .75; transform: scale(.8); }
-    100% { opacity: 1; transform: scale(1) translateX(0); }
+
+    0%,
+    25% {
+        opacity: .75;
+        transform: scale(.8) translateX(200%);
+    }
+
+    75% {
+        opacity: .75;
+        transform: scale(.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateX(0);
+    }
 }
+
 /*  END - Animation options for `slideLeft` filter. Change them carefully */
 
 
@@ -1197,7 +1303,7 @@
 .cbp-animation-slideDelay .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out;
-            transition:         transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
 }
 
 .cbp-animation-slideDelay-out {
@@ -1221,43 +1327,85 @@
 /* out */
 /* @editable properties */
 @-webkit-keyframes cbp-animation-slideDelay-out {
-    100% { -webkit-transform: translateX(-100%); }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
 }
+
 @-moz-keyframes cbp-animation-slideDelay-out {
-    100% { -moz-transform: translateX(-100%); }
+    100% {
+        -moz-transform: translateX(-100%);
+    }
 }
+
 @keyframes cbp-animation-slideDelay-out {
-    100% { transform: translateX(-100%); }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* in */
 /* @editable properties */
 @-webkit-keyframes cbp-animation-slideDelay-in {
-    0% { -webkit-transform: translateX(100%); }
-    100% { -webkit-transform: translateX(0); }
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+    }
 }
+
 @-moz-keyframes cbp-animation-slideDelay-in {
-    0% { -moz-transform: translateX(100%); }
-    100% { -moz-transform: translateX(0); }
+    0% {
+        -moz-transform: translateX(100%);
+    }
+
+    100% {
+        -moz-transform: translateX(0);
+    }
 }
+
 @keyframes cbp-animation-slideDelay-in {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 /* fade out */
 /* @editable properties */
 @-webkit-keyframes cbp-animation-slideDelay-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @-moz-keyframes cbp-animation-slideDelay-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @keyframes cbp-animation-slideDelay-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /*  END - Animation options for `slideDelay` filter. Change them carefully */
@@ -1274,7 +1422,7 @@
 .cbp-animation-3dflip .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out;
-            transition:         transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
 
 
 
@@ -1307,47 +1455,97 @@
 /* out */
 /* @editable properties */
 @-webkit-keyframes rotateOutLeft {
-    100% { opacity: 0; -webkit-transform: rotateY(90deg); }
+    100% {
+        opacity: 0;
+        -webkit-transform: rotateY(90deg);
+    }
 }
 
 @-moz-keyframes rotateOutLeft {
-    100% { opacity: 0; -moz-transform: rotateY(90deg); }
+    100% {
+        opacity: 0;
+        -moz-transform: rotateY(90deg);
+    }
 }
 
 @keyframes rotateOutLeft {
-    100% { opacity: 0; transform: rotateY(90deg); }
+    100% {
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
 }
 
 /* in */
 /* @editable properties */
 @-webkit-keyframes rotateInRight {
-    0% { opacity: 0; -webkit-transform: rotateY(-90deg); }
-    100% { visibility: visible; opacity: 1; -webkit-transform: rotateY(0deg); }
+    0% {
+        opacity: 0;
+        -webkit-transform: rotateY(-90deg);
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transform: rotateY(0deg);
+    }
 }
 
 @-moz-keyframes rotateInRight {
-    0% { opacity: 0; -moz-transform: rotateY(-90deg); }
-    100% { visibility: visible; opacity: 1; -moz-transform: rotateY(0deg); }
+    0% {
+        opacity: 0;
+        -moz-transform: rotateY(-90deg);
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+        -moz-transform: rotateY(0deg);
+    }
 }
 
 @keyframes rotateInRight {
-    0% { opacity: 0; transform: rotateY(-90deg); }
-    100% { visibility: visible; opacity: 1; transform: rotateY(0deg); }
+    0% {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
 }
 
 /* fade out */
 /* @editable properties */
 @-webkit-keyframes cbp-animation-3dflip-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @-moz-keyframes cbp-animation-3dflip-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @keyframes cbp-animation-3dflip-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /*  END - Animation options for `3dflip` filter. Change them carefully */
@@ -1364,7 +1562,7 @@
 .cbp-animation-rotateSides .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out;
-            transition:         transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
 
     -webkit-perspective: 1000px;
     perspective: 1000px;
@@ -1398,47 +1596,94 @@
 /* out */
 /* @editable properties */
 @-webkit-keyframes rotateSides-out {
-    100% { opacity: 0; -webkit-transform: translateZ(-500px) rotateY(90deg); }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateZ(-500px) rotateY(90deg);
+    }
 }
 
 @-moz-keyframes rotateSides-out {
-    100% { opacity: 0; -moz-transform: translateZ(-500px) rotateY(90deg); }
+    100% {
+        opacity: 0;
+        -moz-transform: translateZ(-500px) rotateY(90deg);
+    }
 }
 
 @keyframes rotateSides-out {
-    100% { opacity: 0; transform: translateZ(-500px) rotateY(90deg); }
+    100% {
+        opacity: 0;
+        transform: translateZ(-500px) rotateY(90deg);
+    }
 }
 
 /* in */
 /* @editable properties */
 @-webkit-keyframes rotateSides-in {
-    0% { opacity: 0; -webkit-transform: translateZ(-500px) rotateY(-90deg); }
-    40% { opacity: 0; -webkit-transform: translateZ(-500px) rotateY(-90deg); }
+    0% {
+        opacity: 0;
+        -webkit-transform: translateZ(-500px) rotateY(-90deg);
+    }
+
+    40% {
+        opacity: 0;
+        -webkit-transform: translateZ(-500px) rotateY(-90deg);
+    }
 }
 
 @-moz-keyframes rotateSides-in {
-    0% { opacity: 0; -moz-transform: translateZ(-500px) rotateY(-90deg); }
-    40% { opacity: 0; -moz-transform: translateZ(-500px) rotateY(-90deg); }
+    0% {
+        opacity: 0;
+        -moz-transform: translateZ(-500px) rotateY(-90deg);
+    }
+
+    40% {
+        opacity: 0;
+        -moz-transform: translateZ(-500px) rotateY(-90deg);
+    }
 }
 
 @keyframes rotateSides-in {
-    0% { opacity: 0; transform: translateZ(-500px) rotateY(-90deg); }
-    40% { opacity: 0; transform: translateZ(-500px) rotateY(-90deg); }
+    0% {
+        opacity: 0;
+        transform: translateZ(-500px) rotateY(-90deg);
+    }
+
+    40% {
+        opacity: 0;
+        transform: translateZ(-500px) rotateY(-90deg);
+    }
 }
 
 /* fade out */
 /* @editable properties */
 @-webkit-keyframes cbp-animation-rotateSides-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @-moz-keyframes cbp-animation-rotateSides-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @keyframes cbp-animation-rotateSides-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /*  END - Animation options for `rotateSides` filter. Change them carefully */
@@ -1455,7 +1700,7 @@
 .cbp-animation-flipOutDelay .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out;
-            transition:         transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
 
     -webkit-perspective: 1000px;
     perspective: 1000px;
@@ -1483,32 +1728,62 @@
 /* out */
 /* @editable properties */
 @-webkit-keyframes flipOutDelay-out {
-    100% { -webkit-transform: translateZ(-1000px) rotateY(-90deg); opacity: 0.2; }
+    100% {
+        -webkit-transform: translateZ(-1000px) rotateY(-90deg);
+        opacity: 0.2;
+    }
 }
 
 @-moz-keyframes flipOutDelay-out {
-    100% { -moz-transform: translateZ(-1000px) rotateY(-90deg); opacity: 0.2; }
+    100% {
+        -moz-transform: translateZ(-1000px) rotateY(-90deg);
+        opacity: 0.2;
+    }
 }
 
 @keyframes flipOutDelay-out {
-    100% { transform: translateZ(-1000px) rotateY(-90deg); opacity: 0.2; }
+    100% {
+        transform: translateZ(-1000px) rotateY(-90deg);
+        opacity: 0.2;
+    }
 }
 
 /* in */
 /* @editable properties */
 @-webkit-keyframes flipOutDelay-in {
-    0% { -webkit-transform: translateZ(-1000px) rotateY(90deg); opacity: 0.2; }
-    50% { -webkit-transform: translateZ(-1000px) rotateY(90deg); opacity: 0.2; }
+    0% {
+        -webkit-transform: translateZ(-1000px) rotateY(90deg);
+        opacity: 0.2;
+    }
+
+    50% {
+        -webkit-transform: translateZ(-1000px) rotateY(90deg);
+        opacity: 0.2;
+    }
 }
 
 @-moz-keyframes flipOutDelay-in {
-    0% { -moz-transform: translateZ(-1000px) rotateY(90deg); opacity: 0.2; }
-    50% { -moz-transform: translateZ(-1000px) rotateY(90deg); opacity: 0.2; }
+    0% {
+        -moz-transform: translateZ(-1000px) rotateY(90deg);
+        opacity: 0.2;
+    }
+
+    50% {
+        -moz-transform: translateZ(-1000px) rotateY(90deg);
+        opacity: 0.2;
+    }
 }
 
 @keyframes flipOutDelay-in {
-    0% { transform: translateZ(-1000px) rotateY(90deg); opacity: 0.2; }
-    50% { transform: translateZ(-1000px) rotateY(90deg); opacity: 0.2; }
+    0% {
+        transform: translateZ(-1000px) rotateY(90deg);
+        opacity: 0.2;
+    }
+
+    50% {
+        transform: translateZ(-1000px) rotateY(90deg);
+        opacity: 0.2;
+    }
 }
 
 /*  END - Animation options for `flipOutDelay` filter. Change them carefully */
@@ -1525,7 +1800,7 @@
 .cbp-animation-unfold .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out;
-            transition:         transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
 
     -webkit-perspective: 1000px;
     perspective: 1000px;
@@ -1556,43 +1831,91 @@
 /* out */
 /* @editable properties */
 @-webkit-keyframes unfold-out {
-    99% { opacity: 0.3; }
-    100% { opacity: 0; -webkit-transform: translateX(-100%); }
+    99% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+    }
 }
+
 @-moz-keyframes unfold-out {
-    99% { opacity: 0.3; }
-    100% { opacity: 0; -moz-transform: translateX(-100%); }
+    99% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0;
+        -moz-transform: translateX(-100%);
+    }
 }
+
 @keyframes unfold-out {
-    99% { opacity: 0.3; }
-    100% { opacity: 0; transform: translateX(-100%); }
+    99% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
 }
 
 /* in */
 /* @editable properties */
 @-webkit-keyframes unfold-in {
-    from { opacity: 0; -webkit-transform: translateX(100%) rotateY(90deg); }
+    from {
+        opacity: 0;
+        -webkit-transform: translateX(100%) rotateY(90deg);
+    }
 }
+
 @-moz-keyframes unfold-in {
-    from { opacity: 0; -moz-transform: translateX(100%) rotateY(90deg); }
+    from {
+        opacity: 0;
+        -moz-transform: translateX(100%) rotateY(90deg);
+    }
 }
+
 @keyframes unfold-in {
-    from { opacity: 0; transform: translateX(100%) rotateY(90deg); }
+    from {
+        opacity: 0;
+        transform: translateX(100%) rotateY(90deg);
+    }
 }
 
 /* fade out */
 /* @editable properties */
 @-webkit-keyframes cbp-animation-unfold-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @-moz-keyframes cbp-animation-unfold-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @keyframes cbp-animation-unfold-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /*  END - Animation options for `unfold` filter. Change them carefully */
@@ -1609,7 +1932,7 @@
 .cbp-animation-foldLeft .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out;
-            transition:         transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
 
     -webkit-perspective: 1000px;
     perspective: 1000px;
@@ -1641,40 +1964,79 @@
 /* out */
 /* @editable properties */
 @-webkit-keyframes foldLeft-out {
-    to { opacity: 0; -webkit-transform: translateX(-100%) rotateY(-90deg); }
+    to {
+        opacity: 0;
+        -webkit-transform: translateX(-100%) rotateY(-90deg);
+    }
 }
+
 @-moz-keyframes foldLeft-out {
-    to { opacity: 0; -moz-transform: translateX(-100%) rotateY(-90deg); }
+    to {
+        opacity: 0;
+        -moz-transform: translateX(-100%) rotateY(-90deg);
+    }
 }
+
 @keyframes foldLeft-out {
-    to { opacity: 0; transform: translateX(-100%) rotateY(-90deg); }
+    to {
+        opacity: 0;
+        transform: translateX(-100%) rotateY(-90deg);
+    }
 }
 
 /* in */
 /* @editable properties */
 @-webkit-keyframes foldLeft-in {
-    from { opacity: 0.3; -webkit-transform: translateX(100%); }
+    from {
+        opacity: 0.3;
+        -webkit-transform: translateX(100%);
+    }
 }
+
 @-moz-keyframes foldLeft-in {
-    from { opacity: 0.3; -moz-transform: translateX(100%); }
+    from {
+        opacity: 0.3;
+        -moz-transform: translateX(100%);
+    }
 }
+
 @keyframes foldLeft-in {
-    from { opacity: 0.3; transform: translateX(100%); }
+    from {
+        opacity: 0.3;
+        transform: translateX(100%);
+    }
 }
 
 /* fade out */
 /* @editable properties */
 @-webkit-keyframes cbp-animation-foldLeft-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @-moz-keyframes cbp-animation-foldLeft-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @keyframes cbp-animation-foldLeft-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /*  END - Animation options for `foldLeft` filter. Change them carefully */
@@ -1691,7 +2053,7 @@
 .cbp-animation-scaleDown .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out;
-            transition:         transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
 
     -webkit-perspective: 1000px;
     perspective: 1000px;
@@ -1720,40 +2082,76 @@
 /* out */
 /* @editable properties */
 @-webkit-keyframes scaleDown-out {
-    to { opacity: 0; -webkit-transform: scale(.8); }
+    to {
+        opacity: 0;
+        -webkit-transform: scale(.8);
+    }
 }
+
 @-moz-keyframes scaleDown-out {
-    to { opacity: 0; -moz-transform: scale(.8); }
+    to {
+        opacity: 0;
+        -moz-transform: scale(.8);
+    }
 }
+
 @keyframes scaleDown-out {
-    to { opacity: 0; transform: scale(.8); }
+    to {
+        opacity: 0;
+        transform: scale(.8);
+    }
 }
 
 /* in */
 /* @editable properties */
 @-webkit-keyframes scaleDown-in {
-    from { -webkit-transform: translateX(100%); }
+    from {
+        -webkit-transform: translateX(100%);
+    }
 }
+
 @-moz-keyframes scaleDown-in {
-    from { -moz-transform: translateX(100%); }
+    from {
+        -moz-transform: translateX(100%);
+    }
 }
+
 @keyframes scaleDown-in {
-    from { transform: translateX(100%); }
+    from {
+        transform: translateX(100%);
+    }
 }
 
 /* fade out */
 /* @editable properties */
 @-webkit-keyframes cbp-animation-scaleDown-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @-moz-keyframes cbp-animation-scaleDown-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @keyframes cbp-animation-scaleDown-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /*  END - Animation options for `scaleDown` filter. Change them carefully */
@@ -1770,7 +2168,7 @@
 .cbp-animation-frontRow .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out;
-            transition:         transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
 
     -webkit-perspective: 1000px;
     perspective: 1000px;
@@ -1799,44 +2197,96 @@
 /* out */
 /* @editable properties */
 @-webkit-keyframes frontRow-out {
-    100% { -webkit-transform: translateX(-60%) scale(.8); opacity: 0; }
+    100% {
+        -webkit-transform: translateX(-60%) scale(.8);
+        opacity: 0;
+    }
 }
+
 @-moz-keyframes frontRow-out {
-    100% { -moz-transform: translateX(-60%) scale(.8); opacity: 0; }
+    100% {
+        -moz-transform: translateX(-60%) scale(.8);
+        opacity: 0;
+    }
 }
+
 @keyframes frontRow-out {
-    100% { transform: translateX(-60%) scale(.8); opacity: 0; }
+    100% {
+        transform: translateX(-60%) scale(.8);
+        opacity: 0;
+    }
 }
 
 /* in */
 /* @editable properties */
 @-webkit-keyframes frontRow-in {
-    0% { -webkit-transform: translateX(100%) scale(.8);}
-    100% { visibility: visible; opacity: 1; -webkit-transform: translateX(0%) scale(1); }
+    0% {
+        -webkit-transform: translateX(100%) scale(.8);
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transform: translateX(0%) scale(1);
+    }
 }
+
 @-moz-keyframes frontRow-in {
-    0% { -moz-transform: translateX(100%) scale(.8); }
-    100% { visibility: visible; opacity: 1; -moz-transform: translateX(0%) scale(1); }
+    0% {
+        -moz-transform: translateX(100%) scale(.8);
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+        -moz-transform: translateX(0%) scale(1);
+    }
 }
+
 @keyframes frontRow-in {
-    0% { transform: translateX(100%) scale(.8); }
-    100% { visibility: visible; opacity: 1; transform: translateX(0%) scale(1); }
+    0% {
+        transform: translateX(100%) scale(.8);
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0%) scale(1);
+    }
 }
 
 /* fade out */
 /* @editable properties */
 @-webkit-keyframes cbp-animation-frontRow-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @-moz-keyframes cbp-animation-frontRow-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @keyframes cbp-animation-frontRow-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 /*  END - Animation options for `frontRow` filter. Change them carefully */
 
 
@@ -1851,7 +2301,7 @@
 .cbp-animation-rotateRoom .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out;
-            transition:         transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
 
     -webkit-perspective: 1000px;
     perspective: 1000px;
@@ -1886,44 +2336,93 @@
 /* out */
 /* @editable properties */
 @-webkit-keyframes rotateRoom-out {
-    99% { opacity: .3; }
-    100% { opacity: 0; -webkit-transform: translateX(-100%) rotateY(90deg); }
+    99% {
+        opacity: .3;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%) rotateY(90deg);
+    }
 }
+
 @-moz-keyframes rotateRoom-out {
-    99% { opacity: .3; }
-    100% { opacity: 0; -moz-transform: translateX(-100%) rotateY(90deg); }
+    99% {
+        opacity: .3;
+    }
+
+    100% {
+        opacity: 0;
+        -moz-transform: translateX(-100%) rotateY(90deg);
+    }
 }
+
 @keyframes rotateRoom-out {
-    99% { opacity: .3; }
-    100% { opacity: 0; transform: translateX(-100%) rotateY(90deg); }
+    99% {
+        opacity: .3;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-100%) rotateY(90deg);
+    }
 }
 
 /* in */
 /* @editable properties */
 @-webkit-keyframes rotateRoom-in {
-    from { opacity: .3; -webkit-transform: translateX(100%) rotateY(-90deg); }
+    from {
+        opacity: .3;
+        -webkit-transform: translateX(100%) rotateY(-90deg);
+    }
 }
+
 @-moz-keyframes rotateRoom-in {
-    from { opacity: .3; -moz-transform: translateX(100%) rotateY(-90deg); }
+    from {
+        opacity: .3;
+        -moz-transform: translateX(100%) rotateY(-90deg);
+    }
 }
+
 @keyframes rotateRoom-in {
-    from { opacity: .3; transform: translateX(100%) rotateY(-90deg); }
+    from {
+        opacity: .3;
+        transform: translateX(100%) rotateY(-90deg);
+    }
 }
 
 /* fade out */
 /* @editable properties */
 @-webkit-keyframes cbp-animation-rotateRoom-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @-moz-keyframes cbp-animation-rotateRoom-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 @keyframes cbp-animation-rotateRoom-fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
+
 /*  END - Animation options for `rotateRoom` filter. Change them carefully */
 
 
@@ -1938,7 +2437,7 @@
 .cbp-animation-scaleSides .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .5s ease-in-out;
-            transition:         transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
 
     -webkit-perspective: 1000px;
     perspective: 1000px;
@@ -1960,25 +2459,47 @@
 /* out */
 /* @editable properties */
 @-webkit-keyframes scaleSides-out {
-    to { opacity: 0; -webkit-transform: scale(.6); }
+    to {
+        opacity: 0;
+        -webkit-transform: scale(.6);
+    }
 }
+
 @-moz-keyframes scaleSides-out {
-    to { opacity: 0; -moz-transform: scale(.6); }
+    to {
+        opacity: 0;
+        -moz-transform: scale(.6);
+    }
 }
+
 @keyframes scaleSides-out {
-    to { opacity: 0; transform: scale(.6); }
+    to {
+        opacity: 0;
+        transform: scale(.6);
+    }
 }
 
 /* in */
 /* @editable properties */
 @-webkit-keyframes scaleUpCenter {
-    from { opacity: 0; -webkit-transform: scale(.6); }
+    from {
+        opacity: 0;
+        -webkit-transform: scale(.6);
+    }
 }
+
 @-moz-keyframes scaleUpCenter {
-    from { opacity: 0; -moz-transform: scale(.6); }
+    from {
+        opacity: 0;
+        -moz-transform: scale(.6);
+    }
 }
+
 @keyframes scaleUpCenter {
-    from { opacity: 0; transform: scale(.6); }
+    from {
+        opacity: 0;
+        transform: scale(.6);
+    }
 }
 
 /*  END - Animation options for `scaleSides` filter. Change them carefully */
@@ -1991,13 +2512,13 @@
 .cbp-animation-flipOut {
     /* @editable properties */
     -webkit-transition: height .7s ease-in-out;
-            transition: height .7s ease-in-out;
+    transition: height .7s ease-in-out;
 }
 
 .cbp-animation-flipOut .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .7s ease-in-out;
-            transition:         transform .7s ease-in-out;
+    transition: transform .7s ease-in-out;
 
     -webkit-perspective: 1000px;
     perspective: 1000px;
@@ -2024,29 +2545,47 @@
 /* out */
 /* @editable properties */
 @-webkit-keyframes flipOut-out {
-    100% { -webkit-transform: translateZ(-1000px) rotateY(-90deg); opacity: 0.2; }
+    100% {
+        -webkit-transform: translateZ(-1000px) rotateY(-90deg);
+        opacity: 0.2;
+    }
 }
 
 @-moz-keyframes flipOut-out {
-    100% { -moz-transform: translateZ(-1000px) rotateY(-90deg); opacity: 0.2; }
+    100% {
+        -moz-transform: translateZ(-1000px) rotateY(-90deg);
+        opacity: 0.2;
+    }
 }
 
 @keyframes flipOut-out {
-    100% { transform: translateZ(-1000px) rotateY(-90deg); opacity: 0.2; }
+    100% {
+        transform: translateZ(-1000px) rotateY(-90deg);
+        opacity: 0.2;
+    }
 }
 
 /* in */
 /* @editable properties */
 @-webkit-keyframes flipOut-in {
-    0% { -webkit-transform: translateZ(-1000px) rotateY(90deg); opacity: 0.2; }
+    0% {
+        -webkit-transform: translateZ(-1000px) rotateY(90deg);
+        opacity: 0.2;
+    }
 }
 
 @-moz-keyframes flipOut-in {
-    0% { -moz-transform: translateZ(-1000px) rotateY(90deg); opacity: 0.2; }
+    0% {
+        -moz-transform: translateZ(-1000px) rotateY(90deg);
+        opacity: 0.2;
+    }
 }
 
 @keyframes flipOut-in {
-    0% { transform: translateZ(-1000px) rotateY(90deg); opacity: 0.2; }
+    0% {
+        transform: translateZ(-1000px) rotateY(90deg);
+        opacity: 0.2;
+    }
 }
 
 /*  END - Animation options for `flipOut` filter. Change them carefully */
@@ -2059,13 +2598,13 @@
 .cbp-animation-flipBottom {
     /* @editable properties */
     -webkit-transition: height .7s ease-in-out;
-            transition: height .7s ease-in-out;
+    transition: height .7s ease-in-out;
 }
 
 .cbp-animation-flipBottom .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .7s ease-in-out;
-            transition:         transform .7s ease-in-out;
+    transition: transform .7s ease-in-out;
 
     -webkit-perspective: 1000px;
     perspective: 1000px;
@@ -2093,25 +2632,47 @@
 /* out */
 /* @editable properties */
 @-webkit-keyframes flipBottom-out {
-    to { -webkit-transform: translateZ(-1000px) rotateX(-90deg); opacity: 0.2; }
+    to {
+        -webkit-transform: translateZ(-1000px) rotateX(-90deg);
+        opacity: 0.2;
+    }
 }
+
 @-moz-keyframes flipBottom-out {
-    to { -moz-transform: translateZ(-1000px) rotateX(-90deg); opacity: 0.2; }
+    to {
+        -moz-transform: translateZ(-1000px) rotateX(-90deg);
+        opacity: 0.2;
+    }
 }
+
 @keyframes flipBottom-out {
-    to { transform: translateZ(-1000px) rotateX(-90deg); opacity: 0.2; }
+    to {
+        transform: translateZ(-1000px) rotateX(-90deg);
+        opacity: 0.2;
+    }
 }
 
 /* in */
 /* @editable properties */
 @-webkit-keyframes flipBottom-in {
-    from { -webkit-transform: translateZ(-1000px) rotateX(90deg); opacity: 0.2; }
+    from {
+        -webkit-transform: translateZ(-1000px) rotateX(90deg);
+        opacity: 0.2;
+    }
 }
+
 @-moz-keyframes flipBottom-in {
-    from { -moz-transform: translateZ(-1000px) rotateX(90deg); opacity: 0.2; }
+    from {
+        -moz-transform: translateZ(-1000px) rotateX(90deg);
+        opacity: 0.2;
+    }
 }
+
 @keyframes flipBottom-in {
-    from { transform: translateZ(-1000px) rotateX(90deg); opacity: 0.2; }
+    from {
+        transform: translateZ(-1000px) rotateX(90deg);
+        opacity: 0.2;
+    }
 }
 
 /*  END - Animation options for `flipBottom` filter. Change them carefully */
@@ -2126,20 +2687,21 @@
 
     /* @editable properties */
     -webkit-transition: height .2s ease-in-out;
-            transition: height .2s ease-in-out;
+    transition: height .2s ease-in-out;
 }
 
 .cbp-animation-fadeOutTop .cbp-wrapper {
     /* @editable properties */
     -webkit-transition: opacity .3s ease-in-out, top .3s ease-in-out;
-            transition: opacity .3s ease-in-out, top .3s ease-in-out;
+    transition: opacity .3s ease-in-out, top .3s ease-in-out;
 }
 
 .cbp-animation-fadeOutTop .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out;
-            transition:         transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
 }
+
 /*  END - Animation options for `fadeOutTop` filter. Change them carefully */
 
 
@@ -2152,20 +2714,21 @@
 
     /* @editable properties */
     -webkit-transition: height .2s ease-in-out;
-            transition: height .2s ease-in-out;
+    transition: height .2s ease-in-out;
 }
 
 .cbp-animation-sequentially .cbp-item {
     /* @editable properties */
     -webkit-transition: -webkit-transform .6s ease-in-out;
-            transition:         transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
 }
 
 .cbp-animation-sequentially.cbp-no-transition .cbp-item {
     /* @editable properties */
     -webkit-transition: opacity .5s ease, top .5s ease !important;
-            transition: opacity .5s ease, top .5s ease !important;
+    transition: opacity .5s ease, top .5s ease !important;
 }
+
 /*  END - Animation options for `sequentially` filter. Change them carefully */
 
 
@@ -2183,7 +2746,7 @@
     z-index: -1;
 
     /* @editable properties */
-    background:#000;
+    background: #000;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
 }
 
@@ -2208,18 +2771,18 @@
 
 .cbp-popup-lightbox {
     /* @editable properties */
-    background:rgba(0,0,0,.8);
+    background: rgba(0, 0, 0, .8);
 }
 
 .cbp-popup-singlePage {
     /* @editable properties */
-    background:rgb(255,255,255);
+    background: rgb(255, 255, 255);
     padding: 0;
 }
 
 .cbp-popup-singlePage .cbp-popup-ie8bg {
     /* @editable properties */
-    background:rgb(255,255,255);
+    background: rgb(255, 255, 255);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
@@ -2314,7 +2877,8 @@
     height: 0;
 
     /* @editable properties */
-    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-bottom: 56.25%;
+    /* 16/9 ratio */
     background: #000;
 }
 
@@ -2361,7 +2925,7 @@
 .cbp-popup-singlePage-counter {
     /* @editable properties */
     color: #bbc0df;
-    font: italic 14px/104px 'Open Sans',sans-serif;
+    font: italic 14px/104px 'Open Sans', sans-serif;
     position: absolute;
     right: 47px;
     top: 0;
@@ -2511,7 +3075,7 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=71)";
     opacity: .71;
     width: 50px;
-    height:50px;
+    height: 50px;
 }
 
 .cbp-popup-ready .cbp-popup-loadingBox {
@@ -2527,7 +3091,7 @@
 
     /* @editable properties */
     -webkit-transition: all .6s ease-in-out;
-            transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
 }
 
 .cbp-popup-singlePage-open {
@@ -2537,7 +3101,7 @@
 .cbp-popup-singlePage .cbp-l-project-title {
     /* @editable properties */
     color: #454444;
-    font: 700 42px/60px 'Open sans',sans-serif;
+    font: 700 42px/60px 'Open sans', sans-serif;
     letter-spacing: 2px;
     margin-bottom: 10px;
     text-align: center;
@@ -2547,7 +3111,7 @@
 .cbp-popup-singlePage .cbp-l-project-subtitle {
     /* @editable properties */
     color: #787878;
-    font: 300 14px/21px 'Open sans',sans-serif;
+    font: 300 14px/21px 'Open sans', sans-serif;
     margin: 0 auto 50px;
     max-width: 500px;
     text-align: center;
@@ -2762,20 +3326,21 @@
 }
 
 .cbp-popup-singlePageInline .cbp-popup-content {
-    width: 100%;;
+    width: 100%;
+    ;
     min-height: 200px;
 }
 
 .cbp.cbp-popup-isOpening .cbp-popup-singlePageInline,
 .cbp.cbp-popup-isOpening {
     -webkit-transition: height .4s ease 0s !important;
-            transition: height .4s ease 0s !important;
+    transition: height .4s ease 0s !important;
 }
 
 
 .cbp.cbp-popup-isOpening .cbp-item {
     -webkit-transition: -webkit-transform .4s ease 0s !important;
-            transition:         transform .4s ease 0s !important;
+    transition: transform .4s ease 0s !important;
 }
 
 .cbp-singlePageInline-active {
@@ -2856,6 +3421,7 @@
     color: rgb(117, 117, 117);
     border-color: #DFDFDF;
 }
+
 /*  END - popup -  Change them carefully */
 
 
@@ -2883,7 +3449,7 @@
     position: relative;
     display: inline-block;
     -webkit-transition: all .3s ease-in-out;
-            transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .cbp-l-filters-button .cbp-filter-item:hover {
@@ -2916,13 +3482,13 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 
     -webkit-transition: opacity .25s ease, bottom .25s ease;
-            transition: opacity .25s ease, bottom .25s ease;
+    transition: opacity .25s ease, bottom .25s ease;
 }
 
 .cbp-l-filters-button .cbp-filter-counter:before {
     /* @editable properties */
-    content:"";
-    position:absolute;
+    content: "";
+    position: absolute;
     bottom: -4px;
     left: 0;
     right: 0;
@@ -2945,6 +3511,7 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     opacity: 1;
 }
+
 /*  END - layout filters buttons */
 
 
@@ -3034,6 +3601,7 @@
     /* @editable properties */
     color: #e6e6e6;
 }
+
 /*  END - layout filters dropdown */
 
 
@@ -3052,7 +3620,7 @@
     background-color: #fff;
     border: 1px solid #cdcdcd;
     cursor: pointer;
-    font: 400 12px/30px "Open Sans",sans-serif;
+    font: 400 12px/30px "Open Sans", sans-serif;
     padding: 0 13px;
     position: relative;
     overflow: visible;
@@ -3060,8 +3628,8 @@
     display: inline-block;
 
     -webkit-transition: all .3s ease-in-out;
-            transition: all .3s ease-in-out;
-            color: #888888;
+    transition: all .3s ease-in-out;
+    color: #888888;
 }
 
 .cbp-l-filters-alignLeft .cbp-filter-item:hover {
@@ -3073,13 +3641,14 @@
     /* @editable properties */
     background-color: #3288C4;
     color: #fff !important;
-    opacity:1;
-    border:1px solid #3288C4;
+    opacity: 1;
+    border: 1px solid #3288C4;
 }
 
 .cbp-l-filters-alignLeft .cbp-filter-counter {
     display: inline;
 }
+
 /*  END - layout filters alignLeft */
 
 
@@ -3138,13 +3707,13 @@
     opacity: 0;
 
     -webkit-transition: all .25s ease;
-            transition: all .25s ease;
+    transition: all .25s ease;
 }
 
 .cbp-l-filters-alignCenter .cbp-filter-counter:before {
     /* @editable properties */
-    content:"";
-    position:absolute;
+    content: "";
+    position: absolute;
     bottom: -4px;
     left: 0;
     right: 0;
@@ -3168,6 +3737,7 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     opacity: 1;
 }
+
 /*  END - layout filters alignCenter */
 
 
@@ -3186,7 +3756,7 @@
     background-color: transparent;
     color: #8B8B8B;
     cursor: pointer;
-    font: 400 11px "Open Sans",sans-serif;
+    font: 400 11px "Open Sans", sans-serif;
     padding: 7px 12px;
     position: relative;
     overflow: visible;
@@ -3196,7 +3766,7 @@
     display: inline-block;
 
     -webkit-transition: all .3s ease-in-out;
-            transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .cbp-l-filters-alignRight .cbp-filter-item:hover {
@@ -3206,10 +3776,10 @@
 
 .cbp-l-filters-alignRight .cbp-filter-item-active {
     /* @editable properties */
-    opacity:1;
-    color:#FFFFFF !important;
-    background-color:#3C3C3C;
-    border-color:#3C3C3C;
+    opacity: 1;
+    color: #FFFFFF !important;
+    background-color: #3C3C3C;
+    border-color: #3C3C3C;
 }
 
 .cbp-l-filters-alignRight .cbp-filter-counter {
@@ -3230,13 +3800,13 @@
     opacity: 0;
 
     -webkit-transition: opacity .25s ease, bottom .25s ease;
-            transition: opacity .25s ease, bottom .25s ease;
+    transition: opacity .25s ease, bottom .25s ease;
 }
 
 .cbp-l-filters-alignRight .cbp-filter-counter:before {
     /* @editable properties */
-    content:"";
-    position:absolute;
+    content: "";
+    position: absolute;
     bottom: -4px;
     left: 0;
     right: 0;
@@ -3259,6 +3829,7 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     opacity: 1;
 }
+
 /*  END - layout filters alignRight */
 
 
@@ -3288,7 +3859,7 @@
     border-color: #3288C4;
 
     -webkit-transition: left .3s ease-in-out;
-            transition: left .3s ease-in-out;
+    transition: left .3s ease-in-out;
 }
 
 .cbp-l-filters-list .cbp-filter-item:hover {
@@ -3298,9 +3869,9 @@
 
 .cbp-l-filters-list .cbp-filter-item-active {
     /* @editable properties */
-    opacity:1;
-    color:#FFFFFF !important;
-    background-color:#3288C4;
+    opacity: 1;
+    color: #FFFFFF !important;
+    background-color: #3288C4;
 }
 
 .cbp-l-filters-list-first {
@@ -3317,6 +3888,7 @@
 .cbp-l-filters-list .cbp-filter-counter {
     display: inline;
 }
+
 /*  END - layout filters list */
 
 
@@ -3383,6 +3955,7 @@
     /* @editable properties */
     bottom: -50px;
 }
+
 /* <<< override overlayBottomPush caption */
 
 
@@ -3404,6 +3977,7 @@
     /* @editable properties */
     bottom: -50px;
 }
+
 /* <<< override overlayBottomAlong caption */
 
 
@@ -3419,6 +3993,7 @@
     /* @editable properties */
     bottom: -50px;
 }
+
 /* <<< override overlayBottom caption */
 
 /* ---------- override overlayBottomReveal caption >>> */
@@ -3431,6 +4006,7 @@
     /* @editable properties */
     bottom: 50px;
 }
+
 /* <<< override overlayBottomReveal caption */
 /*  END - layout grid projects */
 
@@ -3449,6 +4025,7 @@
     width: 320px;
     height: 236px;
 }
+
 /*  END - layout grid gallery */
 
 
@@ -3523,6 +4100,7 @@
     /* @editable properties */
     bottom: -44px;
 }
+
 /* <<< override overlayBottomPush caption */
 
 
@@ -3544,6 +4122,7 @@
     /* @editable properties */
     bottom: -44px;
 }
+
 /* <<< override overlayBottomAlong caption */
 
 
@@ -3559,6 +4138,7 @@
     /* @editable properties */
     bottom: -44px;
 }
+
 /* <<< override overlayBottom caption */
 
 /* ---------- override overlayBottomReveal caption >>> */
@@ -3571,6 +4151,7 @@
     /* @editable properties */
     bottom: 44px;
 }
+
 /* <<< override overlayBottomReveal caption */
 /*  END - layout grid team */
 
@@ -3589,6 +4170,7 @@
     width: 350px;
     height: 263px;
 }
+
 /*  END - layout grid full screen */
 
 
@@ -3617,6 +4199,7 @@
     /* @editable properties */
     height: 415px;
 }
+
 /*  END - layout grid masonry */
 
 
@@ -3691,6 +4274,7 @@
     font: 13px/16px "Open Sans", sans-serif;
     color: #787878;
 }
+
 /*  END - layout gid blog */
 
 
@@ -3709,7 +4293,7 @@
     border-radius: 2px;
     color: #7E7B7B;
     display: inline-block;
-    font: 11px/34px "Open Sans",sans-serif;
+    font: 11px/34px "Open Sans", sans-serif;
     min-width: 80px;
     text-decoration: none;
     padding: 0 20px;
@@ -3784,6 +4368,7 @@
     /* @editable properties */
     color: #5D5D5D;
 }
+
 /*  END - layout load more text */
 
 
@@ -3845,7 +4430,7 @@
     margin: auto;
 
     -webkit-transition: opacity .4s ease, left .4s ease;
-            transition: opacity .4s ease, left .4s ease;
+    transition: opacity .4s ease, left .4s ease;
 }
 
 .cbp-slider .cbp-slider-arrowPrev:hover {
@@ -3864,7 +4449,7 @@
     margin: auto;
 
     -webkit-transition: opacity .4s ease, right .4s ease;
-            transition: opacity .4s ease, right .4s ease;
+    transition: opacity .4s ease, right .4s ease;
 }
 
 .cbp-slider .cbp-slider-arrowNext:hover {
@@ -3881,7 +4466,7 @@
     opacity: 0;
 
     -webkit-transition: opacity .4s ease;
-            transition: opacity .4s ease;
+    transition: opacity .4s ease;
 }
 
 .cbp-slider .cbp-slider-bullet {
@@ -3910,7 +4495,7 @@
 .cbp-slider:hover .cbp-slider-arrowNext {
     /* @editable properties */
     opacity: 1;
-    right:20px;
+    right: 20px;
 }
 
 .cbp-slider:hover .cbp-slider-arrowPrev {
@@ -3923,6 +4508,7 @@
     /* @editable properties */
     opacity: 1;
 }
+
 /*  END - basic slider */
 
 
